@@ -1,0 +1,23 @@
+* {
+  padding: 0%;
+  margin: 0%;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'impact';
+  src: url(./fonts/impact.ttf);
+}
+
+@font-face {
+  font-family: 'Dortmund-ExtraBold';
+  src: url(./fonts/Dortmund-ExtraBold.otf);
+}
+
+@font-face {
+  font-family: 'Pavelt';
+  src: url(./fonts/Pavelt.ttf);
+}
