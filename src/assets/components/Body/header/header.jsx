@@ -6,7 +6,7 @@ const Header  = () => {
         <>
             <header>
                 <nav className="">
-                    <div className=" fixed w-full z-10 flex bg-principale p-6 gap-12 sm:gap-28 justify-around shadow-lg">
+                    <div className=" fixed w-full z-20 flex bg-principale p-6 gap-12 sm:gap-28 justify-around shadow-lg">
                         <h1 className="relative  text-xl opacity-90 font-bold font-dortmund">Learn With <strong className="font-pavelt">Onek</strong></h1>
                         <ul className="hidden sm:flex gap-5">
                             {/* J'importe plusieurs fois le composant onglet */}

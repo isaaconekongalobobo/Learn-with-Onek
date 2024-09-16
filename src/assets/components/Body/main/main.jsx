@@ -1,6 +1,7 @@
 import BoutonCta from "../header/boutonCta"
 import Illustration1 from "./illustration1"
 import SectionAbout from "./sectionAbout/sectionAbout"
+import SectionAboutIsaac from "./sectionParcours/sectionAboutIsaac"
 
 const Main = () => {
     return (
@@ -23,6 +24,9 @@ const Main = () => {
                 </div>
                 {/* Section About */}
                 <SectionAbout/>
+                {/* Section About Isaac (l'auteur de cette page) */}
+                <h1>gggg</h1>
+                <SectionAboutIsaac/>
             </main>
         </>
     )

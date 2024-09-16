@@ -11,6 +11,11 @@ export default {
         aliceblue: '#F0F8FF',
         jaune: '#F4C431'
       },
+      backgroundColor : {
+        principale: '#00693E',
+        aliceblue: '#F0F8FF',
+        jaune: '#F4C431'
+      },
       height : {
         bg1: '500px',
         illustration1:'30px'
@@ -18,7 +23,8 @@ export default {
       width : {
         illustration1:'1200px',
         iconelangage: '600px',
-        texteSectionAcceuil: '600px'
+        texteSectionAcceuil: '600px',
+        illustration2: '600px'
       },
       top : {
         accroche:'100px'
