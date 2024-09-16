@@ -21,7 +21,7 @@ export default {
         illustration1:'30px'
       },
       width : {
-        illustration1:'1200px',
+        illustration1:'1100px',
         iconelangage: '600px',
         texteSectionAcceuil: '600px',
         illustration2: '600px'
