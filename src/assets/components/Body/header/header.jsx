@@ -23,7 +23,6 @@ const Header  = () => {
                         <div className="sm:hidden">
                             <img src="burger-menu.png" alt="" className="sm:hidden w-10" />
                         </div>
-                                               
                     </div>
                 </nav>
             </header>
