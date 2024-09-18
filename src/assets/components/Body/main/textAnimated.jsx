@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-// Importation de franer motion
+// Importation de framer motion
 import { motion } from "framer-motion";
 
 // Je creer une variante pour la div contenant le texte
@@ -33,19 +33,22 @@ const child = {
   },
 };
 
-const TitreAnime = ({ text }) => {
+// Composant pour les textes animee qui prend comme props : text,styleText, textColor et textSize
+const TextAnimated = (props) => {
 // J'utilise la methode split() pour decouper la phrase en plusieurs mots
-const mots = text.split(" ");
+const mots = props.text.split(" ");
 
   return (
-    <motion.div className="w-titrePhoneDevice sm:w-texteSectionAcceuil text-2xl sm:text-titrePhoneDevice relative bottom-40 sm:bottom-20 left-3 flex flex-wrap" style={{ overflow: "hidden", display: "flex", fontSize: "2rem" }} variants={container} initial="hidden" animate="visible">
+    <motion.div className={props.styleText} style={{ overflow: "hidden"}} variants={container} initial="hidden" animate="visible">
       {mots.map((word, index) => (
-        <motion.span className="text-principale" variants={child} style={{ marginRight: "5px" }} key={index}>
+        <motion.span className={props.textColor || "text-principale"} variants={child} style={{ marginRight: "5px" }} key={index}>
           {word}
         </motion.span>
       ))}
     </motion.div>
   );
-};
+}
 
-export default TitreAnime;
+export default TextAnimated
+
+// Ce composant va me permetre d'animer et d'ecrire aleatoiremen un texte tout au long de mon projet.

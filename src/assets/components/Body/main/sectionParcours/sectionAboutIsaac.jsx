@@ -1,3 +1,4 @@
+import TextAnimated from "../textAnimated";
 import TitreAnime from "./titreAnime";
 
 const SectionAboutIsaac = () => {
@@ -21,6 +22,8 @@ const SectionAboutIsaac = () => {
                         
                         {/* Titre anime dans la section About Isaac */}
                         <TitreAnime text={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae suscipit fugiat culpa.Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi sit sint molestiae quasi exercitationem dolorum eos soluta vero."}/>
+                        <hr />
+                        <TextAnimated text="Premier essaie pour les textes animee" textColor="text-jaune" styleText="text-4xl flex flex-wrap" />
                     </div>
                 </div>
             </div>

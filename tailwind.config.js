@@ -24,6 +24,7 @@ export default {
         illustration1:'1100px',
         iconelangage: '600px',
         texteSectionAcceuil: '600px',
+        titrePhoneDevice: '300px',
         illustration2: '600px'
       },
       top : {
@@ -36,6 +37,9 @@ export default {
         'impact': ['impact'],
         'dortmund': ['Dortmund-ExtraBold'],
         'pavelt': ['Pavelt']
+      },
+      fontSize: {
+        titrePhoneDevice: '900px'
       },
     },
   },
