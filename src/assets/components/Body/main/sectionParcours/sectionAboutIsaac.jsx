@@ -22,7 +22,7 @@ const SectionAboutIsaac = () => {
                     <div>
                         {/* Titre anime dans la section About Isaac */}
                         <TitreAnime text={"Je partage ce que j'ai appris via la communeaute dev, mes competences et experiences dans le developpement web.Via mon portfolio, je vous fais decouvrir ce que peux faire..."}/>
-                        <GeneralButton text="Voir le Portfolio" />
+                        <GeneralButton text="Voir le Portfolio" btnStyle="text-white p-4 sm:p-3 rounded-full bg-principale relative bottom-28  sm:bottom-12 hover:bg-jaune border-2" />
                         <hr />
                         <TextAnimated text="Premier essaie pour les textes animee" textColor="text-jaune" styleText="text-4xl flex flex-wrap" />
                     </div>
