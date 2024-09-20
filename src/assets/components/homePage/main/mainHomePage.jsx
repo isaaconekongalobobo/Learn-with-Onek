@@ -1,13 +1,13 @@
-import BoutonCta from "../header/boutonCta"
 import Illustration1 from "./illustration1"
 import SectionAbout from "./sectionAbout/sectionAbout"
 import SectionAboutIsaac from "./sectionParcours/sectionAboutIsaac"
 
 // J'importe le composant Acroche qui contient le texte anime de la section 1
 import Accroche from "./section1/accroche"
+import BoutonCta from "../../generalAndPartialsComponents/header/boutonCta"
 
 
-const Main = () => {
+const MainHomePage = () => {
     return (
         <>
             <main className="flex flex-col">
@@ -37,4 +37,4 @@ const Main = () => {
     )
 }
 
-export default Main
+export default MainHomePage

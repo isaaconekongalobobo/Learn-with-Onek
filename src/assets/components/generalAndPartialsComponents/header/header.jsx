@@ -5,13 +5,13 @@ const Header  = () => {
     return (
         <>
             <header>
-                <nav className="">
+                <nav>
                     <div className=" fixed w-full z-20 flex bg-principale p-6 gap-12 sm:gap-28 justify-around shadow-lg">
                         <h1 className="relative  text-xl opacity-90 font-bold font-dortmund">Learn With <strong className="font-pavelt">Onek</strong></h1>
                         <ul className="hidden sm:flex gap-5">
                             {/* J'importe plusieurs fois le composant onglet */}
-                            <Onglet ancre="/acceuil" nom="Acceuil" barre="|" />
-                            <Onglet ancre="/apropos" nom="A propos" barre="|" />
+                            <Onglet ancre="/" nom="Acceuil" barre="|" />
+                            <Onglet ancre="/about" nom="A propos" barre="|" />
                             <Onglet ancre="/portfolio" nom="Mon portfolio" barre="|" />
                             <Onglet ancre="/tutoriels" nom="Tutoriels" barre="|" />
                             <Onglet ancre="/contact" nom="Contact"  />

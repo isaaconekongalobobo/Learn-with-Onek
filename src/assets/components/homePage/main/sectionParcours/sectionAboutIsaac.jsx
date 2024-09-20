@@ -1,5 +1,5 @@
-import GeneralButton from "../generalButton";
-import TextAnimated from "../textAnimated";
+import GeneralButton from "../../../generalAndPartialsComponents/generalButton";
+import TextAnimated from "../../../generalAndPartialsComponents/textAnimated";
 import TitreAnime from "./titreAnime";
 
 const SectionAboutIsaac = () => {
