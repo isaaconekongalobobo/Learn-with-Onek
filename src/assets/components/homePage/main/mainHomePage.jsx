@@ -9,7 +9,7 @@ import BoutonCta from "../../generalAndPartialsComponents/header/boutonCta"
 
 const MainHomePage = () => {
     return (
-        <>
+        <> 
             <main className="flex flex-col">
                 <div className="bg-gradient-to-r from-emerald-500 to-emerald-900 h-auto">
                     <div className="p-10 flex flex-col sm:flex-row bottom-80 gap-36">
