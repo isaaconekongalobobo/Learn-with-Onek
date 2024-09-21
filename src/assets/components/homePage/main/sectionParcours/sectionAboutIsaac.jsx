@@ -38,9 +38,7 @@ const SectionAboutIsaac = () => {
                         variants={MonDesignVariant}
                         initial="hidden"
                         whileInView="visible"
-                        whileHover={{ scale:1.5 }}
                         transition={{ delay: 0.5 }}
-                        
                         />
                     </div>
                     <div>
