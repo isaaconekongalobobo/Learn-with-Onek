@@ -38,7 +38,18 @@ const TitreAnime = ({ text }) => {
 const mots = text.split(" ");
 
   return (
-    <motion.div className="w-titrePhoneDevice sm:w-texteSectionAcceuil text-2xl sm:text-titrePhoneDevice relative bottom-40 sm:bottom-20 left-3 flex flex-wrap" style={{ overflow: "hidden", display: "flex", fontSize: "2rem" }} variants={container} initial="hidden" animate="visible">
+    <motion.div 
+      className="w-titrePhoneDevice sm:w-texteSectionAcceuil text-2xl sm:text-titrePhoneDevice relative bottom-40 sm:bottom-20 left-3 flex flex-wrap" 
+      style={{ overflow: "hidden", display: "flex", fontSize: "2rem" }} 
+      variants={container} 
+      initial="hidden" 
+      // J'utilise ce props pour lancer l'animation du composant lorsque celui-ci sera visible par l'utilisateur
+      whileInView="visible" 
+      // Delai pour le lancement de l'animation
+      transition={{ delay: 1 }}
+      >
+
+        
       {mots.map((word, index) => (
         <motion.span className="text-principale" variants={child} style={{ marginRight: "5px" }} key={index}>
           {word}

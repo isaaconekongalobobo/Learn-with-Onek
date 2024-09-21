@@ -5,6 +5,7 @@ import SectionAboutIsaac from "./sectionParcours/sectionAboutIsaac"
 // J'importe le composant Acroche qui contient le texte anime de la section 1
 import Accroche from "./section1/accroche"
 import BoutonCta from "../../generalAndPartialsComponents/header/boutonCta"
+import SectionRecentPublications from "./sectionRecentPublications/sectionRecentPublications"
 
 
 const MainHomePage = () => {
@@ -30,8 +31,10 @@ const MainHomePage = () => {
                 </div>
                 {/* Section About */}
                 <SectionAbout/>
-                {/* Section About Isaac (l'auteur de cette page) */}
+                {/* Section About Isaac (Parcours de l'auteur de cette page) */}
                 <SectionAboutIsaac/>
+                {/* Section pour les publications recents */}
+                <SectionRecentPublications/>
             </main>
         </>
     )

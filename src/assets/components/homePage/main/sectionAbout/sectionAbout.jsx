@@ -1,4 +1,5 @@
 import GalleryLangages from "./galleryLangages"
+// Importation de framer motion
 
 const SectionAbout = () => {
     return (
@@ -8,7 +9,7 @@ const SectionAbout = () => {
                     <h2 className="font-bold font-dortmund text-3xl text-center sm:text-left mb-5">Venez Apprendre Avec Moi Les Technos Qui Vous Permetrons de Rentrer dans L&apos;univers de la Programmation Informatique</h2>
                     <p className="w-80 mb-5 text-xl sm:w-full text-center sm:text-left">Venez apprendre 
                         <span className="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-jaune relative inline-block m-2">
-                            <span className="relative text-principale italic">
+                            <span className="relative text-principale italic" >
                                 gratuitement 
                             </span>
                         </span>

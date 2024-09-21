@@ -24,11 +24,13 @@ export default {
         illustration1:'1100px',
         iconelangage: '600px',
         texteSectionAcceuil: '600px',
+        texteSectionParcour: '500px',
         titrePhoneDevice: '300px',
         illustration2: '600px'
       },
       top : {
-        accroche:'100px'
+        accroche:'100px',
+        sectionPublicationRecents: '600px',
       },
       screens: {
         'phone':{'max': '640px'},

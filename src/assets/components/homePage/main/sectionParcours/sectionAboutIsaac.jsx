@@ -1,6 +1,19 @@
 import GeneralButton from "../../../generalAndPartialsComponents/generalButton";
-import TextAnimated from "../../../generalAndPartialsComponents/textAnimated";
 import TitreAnime from "./titreAnime";
+
+// Importation de framer motion
+import {motion} from 'framer-motion'
+
+const MonDesignVariant = {
+    hidden: {
+        opacity: 0,
+        x:-20
+    },
+    visible:{
+        opacity:1,
+        x: 20,
+    },
+}
 
 const SectionAboutIsaac = () => {
     return (
@@ -16,15 +29,25 @@ const SectionAboutIsaac = () => {
                     avec vous...
                 </h1>
                 <div className="flex flex-col sm:flex-row">
+                    {/* Image sur le cote */}
                     <div className=''>
-                        <img src="/sectionAboutIsaac/all.png" alt="illustration des mes competences" className='w-illustration2 relative bottom-48 left-8 sm:bottom-48' />
+                        <motion.img 
+                        src="/sectionAboutIsaac/all.png" 
+                        alt="illustration des mes competences" 
+                        className='w-illustration2 relative bottom-48 left-8 sm:bottom-48'
+                        variants={MonDesignVariant}
+                        initial="hidden"
+                        whileInView="visible"
+                        whileHover={{ scale:1.5 }}
+                        transition={{ delay: 0.5 }}
+                        
+                        />
                     </div>
                     <div>
                         {/* Titre anime dans la section About Isaac */}
                         <TitreAnime text={"Je partage ce que j'ai appris via la communeaute dev, mes competences et experiences dans le developpement web.Via mon portfolio, je vous fais decouvrir ce que peux faire..."}/>
-                        <GeneralButton text="Voir le Portfolio" btnStyle="text-white p-4 sm:p-3 rounded-full bg-principale relative bottom-28  sm:bottom-12 hover:bg-jaune border-2" />
-                        <hr />
-                        <TextAnimated text="Premier essaie pour les textes animee" textColor="text-jaune" styleText="text-4xl flex flex-wrap" />
+                        <p className="sm:w-texteSectionParcour text-gray-900 relative bottom-36 sm:bottom-16 left-3 ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati iusto eveniet minima praesentium perferendis a! Quam voluptates est natus id aspernatur qui. Consequuntur earum odio aspernatur, ullam repudiandae ducimus libero.</p>
+                        <GeneralButton text="Voir le Portfolio" btnStyle="text-white p-4 sm:p-3 rounded-full bg-principale relative bottom-32  sm:bottom-12 hover:bg-jaune border-2 left-2" />
                     </div>
                 </div>
             </div>
