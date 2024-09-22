@@ -7,6 +7,16 @@ import Accroche from "./section1/accroche"
 import BoutonCta from "../../generalAndPartialsComponents/header/boutonCta"
 import SectionRecentPublications from "./sectionRecentPublications/sectionRecentPublications"
 
+// Tableau des publications recent a des fin de test
+const recentPosts = [
+    {
+        authorImage: '/Mes pics/isaac-speek.jpeg',
+        firstName: 'Isaac',
+        name:'Onekonga'
+    },
+    {}
+]
+
 
 const MainHomePage = () => {
     return (
@@ -34,7 +44,7 @@ const MainHomePage = () => {
                 {/* Section About Isaac (Parcours de l'auteur de cette page) */}
                 <SectionAboutIsaac/>
                 {/* Section pour les publications recents */}
-                <SectionRecentPublications/>
+                <SectionRecentPublications publicationsTable={recentPosts} />
             </main>
         </>
     )
