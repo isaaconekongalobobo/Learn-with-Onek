@@ -1,8 +1,9 @@
 /* eslint-disable react/prop-types */
+import {motion} from  'framer-motion'
 const PublicationImage = ({urlImage, pubDescription}) => {
     return (
         <>
-            <img src={urlImage} alt={pubDescription} onClick="" />
+            <motion.img className="w-[250px] rounded-lg" src={urlImage} alt={pubDescription} onClick="" whileHover={{y:-3}} />
         </>
     );
 }

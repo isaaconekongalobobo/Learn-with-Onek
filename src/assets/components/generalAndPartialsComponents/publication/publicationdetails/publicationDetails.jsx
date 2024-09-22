@@ -1,19 +1,24 @@
+import CommentsIcon from "../../icons/commentsIcon";
+import LikeIcon from "../../icons/likeIcon";
+import ShareIcon from "../../icons/shareIcon";
+
 /* eslint-disable react/prop-types */
-const PublicationDetails = ({publicationId,likes, setLikes, comments, setComments, shares, setShares}) => {
+const PublicationDetails = ({likes, setLikes, comments, setComments, shares, setShares}) => {
     return (
         <>
-            <div key={publicationId}> 
-                <div>
-                    <img src="" alt="Nombre des likes" onClick={setLikes} />
+            <div className="flex justify-center gap-8"> 
+                <div className="flex gap-2">
+                    {/* J'importe le composant LikeIcon pour afficher l'icone des likes */}
+                    <LikeIcon likes={likes} setLikes={setLikes} />
                     <span> {likes} </span>
                 </div>
-                <div>
-                    <img src="" alt="Nombre des commentaires" onClick={setComments} />
+                <div className="flex gap-2">
+                    <CommentsIcon setComments={setComments}/>
                     <span> {comments} </span>
                 </div>
-                <div>
-                    <img src="" alt="Nombre des partages" onClick={shares} />
-                    <span> {setShares} </span>
+                <div className="flex gap-2">
+                    <ShareIcon setShares={setShares} />
+                    <span> {shares} </span>
                 </div>
             </div>
         </>
