@@ -7,75 +7,75 @@ import Accroche from "./section1/accroche"
 import BoutonCta from "../../generalAndPartialsComponents/header/boutonCta"
 import SectionRecentPublications from "./sectionRecentPublications/sectionRecentPublications"
 
-// Tableau des publications recent a des fin de test
-const recentPosts = [
-    {
-        authorImage: '/Mes pics/isaac-speek.jpeg',
-        firstName: 'Isaac',
-        name:'Onekonga',
-        publicationdate: 'Le 02/03/2024',
-        title:'La toute premiere publication de mon site',
-        pubImage: '/essaieOldPublications/mockuuups-free-gaming-display-mockup.jpg',
-        likes:0,
-        comments:0,
-        shares:0,
-    },
-    {
-        authorImage: '/Mes pics/isaac-speek.jpeg',
-        firstName: 'Isaac',
-        name:'Onekonga',
-        publicationdate: 'Le 02/03/2024',
-        title:'La toute premiere publication de mon site',
-        pubImage: '/essaieOldPublications/mockuuups-free-gaming-display-mockup.jpg',
-        likes:0,
-        comments:0,
-        shares:0,
-    },
-    {
-        authorImage: '/Mes pics/isaac-speek.jpeg',
-        firstName: 'Isaac',
-        name:'Onekonga',
-        publicationdate: 'Le 02/03/2024',
-        title:'La toute premiere publication de mon site',
-        pubImage: '/essaieOldPublications/mockuuups-free-gaming-display-mockup.jpg',
-        likes:0,
-        comments:0,
-        shares:0,
-    },
-    {
-        authorImage: '/Mes pics/isaac-speek.jpeg',
-        firstName: 'Isaac',
-        name:'Onekonga',
-        publicationdate: 'Le 02/03/2024',
-        title:'La toute premiere publication de mon site',
-        pubImage: '/essaieOldPublications/mockuuups-free-gaming-display-mockup.jpg',
-        likes:0,
-        comments:0,
-        shares:0,
-    },
-    {
-        authorImage: '/Mes pics/isaac-speek.jpeg',
-        firstName: 'Isaac',
-        name:'Onekonga',
-        publicationdate: 'Le 02/03/2024',
-        title:'La toute premiere publication de mon site',
-        pubImage: '/essaieOldPublications/mockuuups-free-gaming-display-mockup.jpg',
-        likes:0,
-        comments:0,
-        shares:0,
-    },
-    {
-        authorImage: '/Mes pics/isaac-speek.jpeg',
-        firstName: 'Isaac',
-        name:'Onekonga',
-        publicationdate: 'Le 02/03/2024',
-        title:'La toute premiere publication de mon site',
-        pubImage: '/essaieOldPublications/mockuuups-free-gaming-display-mockup.jpg',
-        likes:0,
-        comments:0,
-        shares:0,
-    },
-]
+// // Tableau des publications recent a des fin de test
+// const recentPosts = [
+//     {
+//         authorImage: '/Mes pics/isaac-speek.jpeg',
+//         firstName: 'Isaac',
+//         name:'Onekonga',
+//         publicationdate: 'Le 02/03/2024',
+//         title:'La toute premiere publication de mon site',
+//         pubImage: '/essaieOldPublications/mockuuups-free-gaming-display-mockup.jpg',
+//         likes:0,
+//         comments:0,
+//         shares:0,
+//     },
+//     {
+//         authorImage: '/Mes pics/isaac-speek.jpeg',
+//         firstName: 'Isaac',
+//         name:'Onekonga',
+//         publicationdate: 'Le 02/03/2024',
+//         title:'La toute premiere publication de mon site',
+//         pubImage: '/essaieOldPublications/mockuuups-free-gaming-display-mockup.jpg',
+//         likes:0,
+//         comments:0,
+//         shares:0,
+//     },
+//     {
+//         authorImage: '/Mes pics/isaac-speek.jpeg',
+//         firstName: 'Isaac',
+//         name:'Onekonga',
+//         publicationdate: 'Le 02/03/2024',
+//         title:'La toute premiere publication de mon site',
+//         pubImage: '/essaieOldPublications/mockuuups-free-gaming-display-mockup.jpg',
+//         likes:0,
+//         comments:0,
+//         shares:0,
+//     },
+//     {
+//         authorImage: '/Mes pics/isaac-speek.jpeg',
+//         firstName: 'Isaac',
+//         name:'Onekonga',
+//         publicationdate: 'Le 02/03/2024',
+//         title:'La toute premiere publication de mon site',
+//         pubImage: '/essaieOldPublications/mockuuups-free-gaming-display-mockup.jpg',
+//         likes:0,
+//         comments:0,
+//         shares:0,
+//     },
+//     {
+//         authorImage: '/Mes pics/isaac-speek.jpeg',
+//         firstName: 'Isaac',
+//         name:'Onekonga',
+//         publicationdate: 'Le 02/03/2024',
+//         title:'La toute premiere publication de mon site',
+//         pubImage: '/essaieOldPublications/mockuuups-free-gaming-display-mockup.jpg',
+//         likes:0,
+//         comments:0,
+//         shares:0,
+//     },
+//     {
+//         authorImage: '/Mes pics/isaac-speek.jpeg',
+//         firstName: 'Isaac',
+//         name:'Onekonga',
+//         publicationdate: 'Le 02/03/2024',
+//         title:'La toute premiere publication de mon site',
+//         pubImage: '/essaieOldPublications/mockuuups-free-gaming-display-mockup.jpg',
+//         likes:0,
+//         comments:0,
+//         shares:0,
+//     },
+// ]
 
 
 const MainHomePage = () => {
@@ -104,7 +104,7 @@ const MainHomePage = () => {
                 {/* Section About Isaac (Parcours de l'auteur de cette page) */}
                 <SectionAboutIsaac/>
                 {/* Section pour les publications recents */}
-                <SectionRecentPublications publicationsTable={recentPosts} />
+                <SectionRecentPublications/>
             </main>
         </>
     )

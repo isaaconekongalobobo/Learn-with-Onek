@@ -17,21 +17,21 @@ const Publication = ({publicationInfo, setPublicationInfo}) => {
             <motion.div whileHover={{y:-15}} className="bg-principale p-5 rounded-3xl flex flex-col gap-5 shadow-md"> 
                 <div className="flex flex-col" >
                     <div className="flex gap-4">
-                        <AuthorImage urlImage={publicationInfo.authorImage} />
+                        <AuthorImage urlImage={publicationInfo.authorImage || '/Mes pics/isaac-speek.jpeg'} />
                         <div className="flex flex-col relative top-2">
-                            <h2 className="text-white font-medium"> {publicationInfo.firstName} {publicationInfo.name} </h2>                        
+                            <h2 className="text-white font-medium"> {publicationInfo.firstName || 'Isaac'} {publicationInfo.name || 'Onek'} </h2>                        
                             <p className="text-xs"> {publicationInfo.publicationdate} </p>
                         </div>  
                     </div>   
                     <h2 className="text-wrap w-80 pt-3 sm:pt-2 text-white font-bold text-xl"> {publicationInfo.title} </h2>               
                 </div>
                 <div className="flex items-center justify-center">
-                    <PublicationImage urlImage={publicationInfo.pubImage} />
+                    <PublicationImage urlImage={publicationInfo.pubImage || '/essaieOldPublications/mockuuups-free-gaming-display-mockup.jpg'} />
                 </div>
                 {/* Composant pour les details de la publication tel que le nombre des likes, de commentaires et de partages */}
                 <PublicationDetails 
-                    publicationId={publicationInfo.id} 
-                    likes={likes}
+                    publicationId={publicationInfo.id || 0} 
+                    likes={likes || 0}
                     setLikes={setPublicationInfo}
                     comments={comments}
                     setComments=""
