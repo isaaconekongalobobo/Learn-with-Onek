@@ -3,6 +3,16 @@
   margin: 0%;
 }
 
+:root {
+  --jaune: '#F4C431'
+}
+
+/* Cette class modifie le style de l'onglet qui est active grace a la class me donne Navlink */
+.active {
+  color: #F4C431;
+  font-weight: bold;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

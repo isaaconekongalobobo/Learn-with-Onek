@@ -7,6 +7,7 @@ import AboutPage from './assets/components/AboutPage/aboutPage'
 import PortFolioPage from './assets/components/portfolioPage/portFolioPage'
 import TutorialsPage from './assets/components/tutorialsPage/tutorialsPage'
 import ContactPage from './assets/components/contactPage/contactPage'
+import PublicationDetail from './assets/components/homePage/main/sectionRecentPublications/publicationDetail/publicationDetail'
 
 // Je cree un routeur pour y enregistrer toutes les URLs de mon application
 const router = createBrowserRouter (
@@ -36,6 +37,11 @@ const router = createBrowserRouter (
       // Page Contacts
       path: '/contact',
       element: <ContactPage/>
+    },
+    {
+      // Details d'une publication
+      path: '/tutoriels/:id',
+      element: <PublicationDetail/>
     },
     
   ]

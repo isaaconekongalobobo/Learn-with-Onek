@@ -7,6 +7,9 @@ import PublicationImage from "./publicationImage";
 // J'importe framer motion
 import {motion} from 'framer-motion'
 
+// J'importe le composant <link> de react router afin de creer un lien pour chaque publications
+import { Link } from "react-router-dom";
+
 const Publication = ({publicationInfo}) => {
     // Je creer des hook pour modifier les informations d'une publication
     const [likeNumber, setLikeNumber] = useState(publicationInfo.likes || 0)
@@ -26,7 +29,10 @@ const Publication = ({publicationInfo}) => {
                     <h2 className="text-wrap w-80 pt-3 sm:pt-2 text-white font-bold text-xl"> {publicationInfo.title} </h2>               
                 </div>
                 <div className="flex items-center justify-center">
-                    <PublicationImage urlImage={publicationInfo.pubImage || '/essaieOldPublications/mockuuups-free-gaming-display-mockup.jpg'} />
+                    {/* Lien pour mener au details d'un article */}
+                    <Link to={`/tutoriels/:${publicationInfo.id}`}>
+                        <PublicationImage urlImage={publicationInfo.pubImage || '/essaieOldPublications/mockuuups-free-gaming-display-mockup.jpg'} />
+                    </Link>
                 </div>
                 {/* Composant pour les details de la publication tel que le nombre des likes, de commentaires et de partages */}
                 <PublicationDetails 

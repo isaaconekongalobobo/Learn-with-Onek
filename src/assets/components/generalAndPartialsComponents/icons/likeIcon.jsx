@@ -41,6 +41,7 @@ const LikeIcon = ({likes, setLikes}) => {
             setLikes (likes - 1)
             console.log("Vous n'aimez plus...");
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[liked])
 
     return (
