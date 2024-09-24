@@ -7,9 +7,9 @@ import PublicationImage from "./publicationImage";
 // J'importe framer motion
 import {motion} from 'framer-motion'
 
-const Publication = ({publicationInfo, setPublicationInfo}) => {
+const Publication = ({publicationInfo}) => {
     // Je creer des hook pour modifier les informations d'une publication
-    const [likes] = useState(publicationInfo.likes)
+    const [likeNumber, setLikeNumber] = useState(publicationInfo.likes || 0)
     const [comments] = useState(publicationInfo.comments)
     const [shares] = useState(publicationInfo.shares)
     return (
@@ -31,8 +31,8 @@ const Publication = ({publicationInfo, setPublicationInfo}) => {
                 {/* Composant pour les details de la publication tel que le nombre des likes, de commentaires et de partages */}
                 <PublicationDetails 
                     publicationId={publicationInfo.id || 0} 
-                    likes={likes || 0}
-                    setLikes={setPublicationInfo}
+                    likes={likeNumber}
+                    setLikes={setLikeNumber}
                     comments={comments}
                     setComments=""
                     shares={shares}

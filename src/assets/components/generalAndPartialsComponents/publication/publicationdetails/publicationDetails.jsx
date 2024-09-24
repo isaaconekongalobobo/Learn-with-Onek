@@ -7,11 +7,8 @@ const PublicationDetails = ({likes, setLikes, comments, setComments, shares, set
     return (
         <>
             <div className="flex justify-center gap-8"> 
-                <div className="flex gap-2">
-                    {/* J'importe le composant LikeIcon pour afficher l'icone des likes */}
-                    <LikeIcon likes={likes} setLikes={setLikes} />
-                    <span> {likes} </span>
-                </div>
+                {/* J'importe le composant LikeIcon pour afficher l'icone des likes */}
+                <LikeIcon likes={likes} setLikes={setLikes} />
                 <div className="flex gap-2">
                     <CommentsIcon setComments={setComments}/>
                     <span> {comments} </span>
