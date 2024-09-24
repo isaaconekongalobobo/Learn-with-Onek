@@ -1,7 +1,7 @@
 
 // J'importe framer motion
 import {motion} from 'framer-motion'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 // Je creer des variants pour animer le svg
 const svgVariant = {
@@ -16,12 +16,28 @@ const svgVariant = {
 
 // Je recupere en parametre un props, setLikes afin d'incrementer ou de decrementer le nombre des likes
 const LikeIcon = () => {
-    // Je creer un hook qui va stocker et changer la couleur de l'icone
+    // Je cree un etat qui va stocker et changer la couleur de l'icone, et qui a comme valeur par defaut le blanc
     const [likeColor, setLikeColor] = useState('#ffffff')
+    // Je cree un etat booleen sur lequel je vais me baser pour modifier la couleur du like
+    const [liked, setLiked] = useState (false)
+
+    // Cette fonction change la valeur de liked au contraire de sa valeur actuelle lorsque l'utilisateur clique sur l'icone
     const click = () => {
-        setLikeColor('#f44336')
+        setLiked (!liked)
     }
 
+    // Le hook useEffect ici a une fonction qui change la couleur de l'icone si la valeur de liked, qui lui est passe comme 
+    // dependances change egalement
+    useEffect (()=> {
+        if (liked) {
+            setLikeColor('#f44336')
+            console.log("Vous avez likee!");
+            
+        } else if (!liked) {
+            setLikeColor('#ffffff')
+            console.log("Vous n'aimez plus...");
+        }
+    },[liked])
 
     return (
         <div>
