@@ -1,27 +1,36 @@
+import { NavLink } from "react-router-dom"
 import GalleryLangages from "./galleryLangages"
 // Importation de framer motion
 
 const SectionAbout = () => {
     return (
         <>
-            <section className="bg-principale flex flex-col sm:flex-row p-5 pt-16 text-sm sm:p-20  ">
-                <div className="relative sm:w-texteSectionAcceuil sm:top-32">
-                    <h2 className="font-bold font-dortmund text-3xl text-center sm:text-left mb-5">Venez Apprendre Avec Moi Les Technos Qui Vous Permetrons de Rentrer dans L&apos;univers de la Programmation Informatique</h2>
-                    <p className="w-80 mb-5 text-xl sm:w-full text-center sm:text-left">Venez apprendre 
-                        <span className="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-jaune relative inline-block m-2">
-                            <span className="relative text-principale italic" >
-                                gratuitement 
+            <section className="bg-principale flex flex-col sm:flex-row gap-5 sm:gap-0 p-10 sm:pt-10 justify-around items-center ">
+                <div className="sm:w-[700px]">
+                    <div className="flex flex-col gap-6">
+                        <div>
+                            <h2 className="font-medium font-dortmund text-[130%] text-left mb-[2%]">Venez Apprendre Avec Moi Les Technos Qui Vous Permetrons de Rentrer dans L&apos;univers de la Programmation Informatique</h2>
+                            <hr className="mb-[4%]" />
+                            <p className="w-[100%] sm:w-full mb-5 text-[105%] text-wrap  text-left sm:text-left">Venez apprendre 
+                            <span className="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-jaune relative inline-block m-2">
+                                <span className="relative text-principale italic" >
+                                    gratuitement 
+                                </span>
                             </span>
-                        </span>
-                        des langages de programation tel  que le <strong className="italic">HTML</strong>, le<strong className="italic">CSS3</strong>, le <strong className="italic">JavaScript</strong>, le <strong className="italic">Php</strong> et plein d&apos;autres... </p>
-                        <div className="hidden sm:flex mt-6 sm:w-full sm:p-5">
-                            <a href="" className="bg-jaune p-5 rounded-full relative sm:left-44" >Voir tout le catalogue</a>
+                            des langages de programation tel  que le <strong className="italic">HTML</strong>, le<strong className="italic">CSS3</strong>, le <strong className="italic">JavaScript</strong>, le <strong className="italic">Php</strong> et plein d&apos;autres... </p>                            
                         </div>
+                        {/* Bouton pour afficher tout les catalogues, visible uniquement sur pc */}
+                        <div className="m-auto hidden sm:block">
+                            <NavLink  to="/tutoriels/modules" className="bg-jaune p-3 rounded-full " >Voir tout le catalogue</NavLink>
+                        </div>                        
+                    </div>
                 </div>
                 <GalleryLangages/>
-                <div className="mt-6 sm:hidden w-full mb-5">
-                    <a href="" className="bg-jaune p-5 rounded-full relative left-24 hover:bg-white hover:text-principale hover:border-jaune" >Voir tout le catalogue</a>
-                </div>
+
+                {/* Bouton pour afficher tout les catalogues, visible uniquement sur des petites appareils */}
+                <div className="m-auto sm:hidden">
+                            <NavLink  to="/tutoriels/modules" className="bg-jaune p-3 rounded-full " >Voir tout le catalogue</NavLink>
+                </div> 
             </section>
         </>
     )

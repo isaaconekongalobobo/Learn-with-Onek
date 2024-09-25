@@ -1,6 +1,13 @@
-import Icone from "./icon"
 // J'importe framer motion 
 import { motion } from "framer-motion"
+import Html from "./languagesIcons/html"
+import Css from "./languagesIcons/css"
+import JavaScript from "./languagesIcons/javaScript"
+import React from "./languagesIcons/react"
+import NodeJs from "./languagesIcons/nodeJs"
+import Php from "./languagesIcons/php"
+import { NavLink } from "react-router-dom"
+
 
 // Variant pour l'animation des icones 
 const allIconsVariant = {
@@ -15,15 +22,31 @@ const allIconsVariant = {
     }
   }
 
+const iconsStyle = "size-24 sm:size-32"
+
   
 const GalleryLangages = () => {
     return (
         <>
-            <motion.div className=" grid p-5 gap-4  grid-cols-2 sm:grid sm:grid-cols-2 sm:w-iconelangage" variants={allIconsVariant} initial="hidden" whileInView="visible" >
-                <Icone source="/iconeLangages/icone-html.png" description="Icone html" /> 
-                <Icone source="/iconeLangages/icone-css.png" description="Icone Css" /> 
-                <Icone source="/iconeLangages/icone-js.png" description="Icone JavaScript" /> 
-                <Icone source="/iconeLangages/icone-php.png" description="Icone Php" /> 
+            <motion.div className=" size- grid grid-cols-3 sm:grid-cols-1 xl:grid-cols-3 gap-3.5 px-4 py-3 " variants={allIconsVariant} initial="hidden" whileInView="visible" >
+              <NavLink to="/tutoriels/module/:html" >
+                <Html style={iconsStyle}/>
+              </NavLink>
+              <NavLink to="/tutoriels/module/:css" >
+                <Css style={iconsStyle} />
+              </NavLink>
+              <NavLink to="/tutoriels/module/:js" >
+                <JavaScript style={iconsStyle} />
+              </NavLink>
+              <NavLink to="/tutoriels/module/:react" >
+                <React style={iconsStyle} />
+              </NavLink>
+              <NavLink to="/tutoriels/module/:node.js" >
+                <NodeJs style={iconsStyle} />
+              </NavLink>
+              <NavLink to="/tutoriels/module/:php" >
+                <Php style={iconsStyle} />
+              </NavLink>                    
             </motion.div>
         </>
     )
