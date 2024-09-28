@@ -17,7 +17,7 @@ const Publication = ({publicationInfo}) => {
     const [shares] = useState(publicationInfo.shares)
     return (
         <>
-            <motion.div whileHover={{y:-15}} className="bg-principale p-5 rounded-3xl flex flex-col gap-5 shadow-md"> 
+            <motion.div whileHover={{y:-15}} className="bg-principale p-[5%]  sm:p-[2%] rounded-3xl flex flex-col gap-5 shadow-md"> 
                 <div className="flex flex-col" >
                     <div className="flex gap-4">
                         <AuthorImage urlImage={publicationInfo.authorImage || '/Mes pics/isaac-speek.jpeg'} />

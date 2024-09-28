@@ -18,8 +18,8 @@ const MonDesignVariant = {
 const SectionAboutIsaac = () => {
     return (
         <div className="pt-28" >
-            <div className='absolute flex flex-col w-full z-10 p-6 gap-12 sm:gap-28 justify-around '>
-                <h1 className='text-principale text-3xl text-center font-bold relative bottom-32  sm:bottom-24'>
+            <div className='absolute flex flex-col w-full z-10 p-6 gap-12 pt-8 sm:gap-28 justify-around items-center'>
+                <h1 className='text-principale text-[150%] text-center font-bold relative bottom-32  sm:bottom-24'>
                     Je partage mon 
                     <span className='before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-jaune relative inline-block m-2'>
                         <span className="relative text-principale italic">
@@ -28,13 +28,13 @@ const SectionAboutIsaac = () => {
                     </span>
                     avec vous...
                 </h1>
-                <div className="flex flex-col sm:flex-row">
+                <div className="flex flex-col sm:flex-row relative sm:top-[-50px]  ">
                     {/* Image sur le cote */}
-                    <div className=''>
+                    <div className='relative'>
                         <motion.img 
                         src="/sectionAboutIsaac/all.png" 
                         alt="illustration des mes competences" 
-                        className='w-illustration2 relative bottom-48 left-8 sm:bottom-48'
+                        className='w-[75%]  relative left-[15%] bottom-48 sm:bottom-48'
                         variants={MonDesignVariant}
                         initial="hidden"
                         whileInView="visible"
@@ -42,10 +42,12 @@ const SectionAboutIsaac = () => {
                         />
                     </div>
                     <div>
-                        {/* Titre anime dans la section About Isaac */}
-                        <TitreAnime text={"Je partage ce que j'ai appris via la communeaute dev, mes competences et experiences dans le developpement web.Via mon portfolio, je vous fais decouvrir ce que peux faire..."}/>
-                        <p className="sm:w-texteSectionParcour text-gray-900 relative bottom-36 sm:bottom-16 left-3 ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati iusto eveniet minima praesentium perferendis a! Quam voluptates est natus id aspernatur qui. Consequuntur earum odio aspernatur, ullam repudiandae ducimus libero.</p>
-                        <GeneralButton text="Voir le Portfolio" btnStyle="text-white p-4 sm:p-3 rounded-full bg-principale relative bottom-32  sm:bottom-12 hover:bg-jaune border-2 left-2" />
+                        <div className="sm:relative sm:right-[15%]">
+                            {/* Titre anime dans la section About Isaac */}
+                            <TitreAnime text={"Je partage ce que j'ai appris via la communeaute dev, mes competences et experiences dans le developpement web.Via mon portfolio, je vous fais decouvrir ce que peux faire..."}/>
+                            <p className="sm:w-texteSectionParcour text-gray-900 relative bottom-36 sm:bottom-16 left-3 ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati iusto eveniet minima praesentium perferendis a! Quam voluptates est natus id aspernatur qui. Consequuntur earum odio aspernatur, ullam repudiandae ducimus libero.</p>
+                            <GeneralButton text="Voir le Portfolio" btnStyle="text-white p-4 sm:p-3 rounded-full bg-principale relative bottom-32  sm:bottom-12 hover:bg-jaune border-2 left-2" />                            
+                        </div>
                     </div>
                 </div>
             </div>

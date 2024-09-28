@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import Publication from '../../../generalAndPartialsComponents/publication/publication';
 import NoRecentPublicationsMessage from './noRecentPublicationsMessage';
 import Loader from '../../../generalAndPartialsComponents/loader';
+import axios from 'axios';
 
 // Bloc div pour les publications
 const BlocPuclications = ({recentPublications, setRecentPublications,loader}) => {
@@ -35,25 +36,20 @@ const SectionRecentPublications = () => {
     // Variable d'etat pour les publications recentes
     const [recentPublications, setRecentPublications] = useState([])
     // Variable d'etat pour gerer le loader
-    const [loader, setLoader] = useState(false)
+    const [loader, setLoader] = useState(true)
 
     // Je creer une fonction asyncrone pour fetcher les donnee, et je vais appeller cette fonction dans useEffet()
     const fetchRecentPub = async () => {
-        try {
-            // Je mets le loader a true pour afficher celui-ci en attendant que les donnee se chargent
-            setLoader (true)
-            // Je fetch les donnee via une api
-            const fetchRecentPub = await fetch ('https://jsonplaceholder.typicode.com/posts')
-            // je recupere les datas
-            const recentPubData = await fetchRecentPub.json ()
-            // Je change l'etat de la variable contenant les posts
-            setRecentPublications (recentPubData)
-            // Je masque maintenant le loader apres le chargement des donnees
+        // https://jsonplaceholder.typicode.com/posts
+        axios.get ('https://jsonplaceholder.typicode.com/posts')
+        .then ((response) => {
+            setRecentPublications (response.data)
+        })
+        .catch ((console.error()
+        ))
+        .finally (() => {
             setLoader (false)
-            
-        } catch (error) {
-            console.log(`Erreur lors de la requette ${error}`);
-        }
+        })
     }
 
     // J'utilise useEffect pour faire une requette a l'api au montage du composant, et le lui est passee un tableau des dependances
@@ -64,7 +60,7 @@ const SectionRecentPublications = () => {
 
     return (
         <>
-            <section className="relative top-[950px] sm:top-[600px] p-14 bg-slate-100 pt-40 sm:pt-32">
+            <section className="relative top-[780px] sm:top-[450px] p-14 bg-slate-100 pt-40 sm:pt-32">
                 <div className="text-gray-900 flex flex-col items-center">
                     <motion.h1 className='text-principale text-2xl text-center w-96 sm:w-texteSectionParcour font-bold relative bottom-32  sm:bottom-24' >Regarde les dernières  <strong className="text-jaune opacity-90">publications </strong> faites pour toi</motion.h1>
                     <p className="text-center relative  top-[-110px] sm:top-[-80px] w-[320px] sm:w-full">As-tu raté mes derniers posts ? Je te récapitule</p>

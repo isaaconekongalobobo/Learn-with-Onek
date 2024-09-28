@@ -40,7 +40,7 @@ const mots = text.split(" ");
   return (
     <motion.div 
       className="w-titrePhoneDevice sm:w-texteSectionAcceuil text-2xl sm:text-titrePhoneDevice relative bottom-40 sm:bottom-20 left-3 flex flex-wrap" 
-      style={{ overflow: "hidden", display: "flex", fontSize: "2rem" }} 
+      style={{ overflow: "hidden", display: "flex", fontSize: "25px", fontWeight:"semi-bold" }} 
       variants={container} 
       initial="hidden" 
       // J'utilise ce props pour lancer l'animation du composant lorsque celui-ci sera visible par l'utilisateur

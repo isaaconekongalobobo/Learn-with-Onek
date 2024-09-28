@@ -5,7 +5,7 @@ import GalleryLangages from "./galleryLangages"
 const SectionAbout = () => {
     return (
         <>
-            <section className="bg-principale flex flex-col sm:flex-row gap-5 sm:gap-0 p-10 sm:pt-10 justify-around items-center ">
+            <section className="bg-principale flex flex-col sm:flex-row gap-5 sm:gap-0 p-10 sm:pt-20 sm:pb-20 justify-around items-center ">
                 <div className="sm:w-[700px]">
                     <div className="flex flex-col gap-6">
                         <div>
