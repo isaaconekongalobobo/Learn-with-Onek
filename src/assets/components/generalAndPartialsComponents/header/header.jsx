@@ -1,13 +1,16 @@
 import BoutonCta from "./boutonCta"
 import Onglet from "./onglet"
+// import { useState } from "react"
 
 const Header  = () => {
+    // Je creer un state pour gerer l'affichage de la sidebar
+    // const [sidebar, setSideBar] = useState(false)
     return (
         <>
             <header>
                 <nav>
-                    <div className=" fixed w-full z-20 flex bg-principale p-6 gap-12 sm:gap-28 justify-around shadow-lg">
-                        <h1 className="relative  text-xl opacity-90 font-bold font-dortmund">Learn With <strong className="font-pavelt">Onek</strong></h1>
+                    <div className=" fixed w-full z-20 h-[10%] sm:h-[12%] flex bg-principale  p-6 gap-12 sm:gap-28 justify-around items-center shadow-lg">
+                        <h1 className="relative right-4 text-xs sm:text-xl  font-bold font-dortmund"><strong className="font-pavelt">Learn With Onek</strong></h1>
                         <ul className="hidden sm:flex gap-5">
                             {/* J'importe plusieurs fois le composant onglet */}
                             <Onglet ancre="/" nom="Acceuil" barre="|" />
@@ -20,9 +23,9 @@ const Header  = () => {
                         <div className="hidden sm:block sm:relative ">
                             <BoutonCta/> 
                         </div>
-                        <div className="sm:hidden">
-                            <img src="burger-menu.png" alt="" className="sm:hidden w-10" />
-                        </div>
+                        <button className="sm:hidden">
+                            <img src="burger-menu.png" alt="" className="sm:hidden size-10 relative left-5" />
+                        </button>
                     </div>
                 </nav>
             </header>

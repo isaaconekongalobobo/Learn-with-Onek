@@ -15,7 +15,7 @@ const BlocPuclications = ({recentPublications, setRecentPublications,loader}) =>
     } 
 
     return (
-        <div className='flex flex-col sm:flex-row relative top-[-80px] sm:top-[-40px] sm:flex-wrap gap-5 justify-center'>
+        <div className='flex flex-col sm:flex-row relative top-[-80px] sm:top-[-40px] sm:flex-wrap gap-5 justify-center items-center'>
             {
                 recentPublications.map ((pub) => (
                     // Chaque publication se trouve dans un lien fais avec la balise <Link> et c'est a partir de ce lien la que 

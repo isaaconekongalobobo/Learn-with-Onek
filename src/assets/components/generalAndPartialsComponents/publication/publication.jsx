@@ -17,7 +17,7 @@ const Publication = ({publicationInfo}) => {
     const [shares] = useState(publicationInfo.shares)
     return (
         <>
-            <motion.div whileHover={{y:-15}} className="bg-principale p-[5%]  sm:p-[2%] rounded-3xl flex flex-col gap-5 shadow-md"> 
+            <motion.div whileHover={{y:-15}} className="bg-principale p-[5%] w-[120%] sm:w-80 justify-between  sm:p-[2%] rounded-3xl flex flex-col gap-5 shadow-md"> 
                 <div className="flex flex-col" >
                     <div className="flex gap-4">
                         <AuthorImage urlImage={publicationInfo.authorImage || '/Mes pics/isaac-speek.jpeg'} />
@@ -26,9 +26,9 @@ const Publication = ({publicationInfo}) => {
                             <p className="text-xs"> {publicationInfo.publicationdate} </p>
                         </div>  
                     </div>   
-                    <h2 className="text-wrap w-80 pt-3 sm:pt-2 text-white font-bold text-xl"> {publicationInfo.title} </h2>               
                 </div>
-                <div className="flex items-center justify-center">
+                <div className="flex flex-col items-center justify-center gap-2 ">
+                    <h2 className="ml-3 text-start"> { publicationInfo.title} </h2>               
                     {/* Lien pour mener au details d'un article */}
                     <Link to={`/tutoriels/:${publicationInfo.id}`}>
                         <PublicationImage urlImage={publicationInfo.pubImage || '/essaieOldPublications/mockuuups-free-gaming-display-mockup.jpg'} />

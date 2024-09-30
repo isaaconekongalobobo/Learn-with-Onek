@@ -33,12 +33,14 @@ const LikeIcon = ({likes, setLikes}) => {
     useEffect (()=> {
         if (liked) {
             setLikeColor('#f44336')
-            setLikes (likes + 1)
+            setLikes(likes+1)
             console.log("Vous avez likee!");
             
         } else if (!liked) {
             setLikeColor('#ffffff')
-            setLikes (likes - 1)
+            if (likes > 0) {
+                setLikes (likes - 1)
+            }
             console.log("Vous n'aimez plus...");
         }
     // eslint-disable-next-line react-hooks/exhaustive-deps
