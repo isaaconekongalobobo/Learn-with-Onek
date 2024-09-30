@@ -1,10 +1,15 @@
+import { useState } from "react"
 import BoutonCta from "./boutonCta"
 import Onglet from "./onglet"
-// import { useState } from "react"
+import Sidebar from "./sidebar/sidebar"
 
+// Importation de framer-motion
+import {motion} from 'framer-motion'
 const Header  = () => {
     // Je creer un state pour gerer l'affichage de la sidebar
-    // const [sidebar, setSideBar] = useState(false)
+    const [sidebar, setSideBar] = useState(false)
+    // Fonction pour modifier le state de sidebar
+    const updateSideBar = () => setSideBar (!sidebar)
     return (
         <>
             <header>
@@ -24,10 +29,18 @@ const Header  = () => {
                             <BoutonCta/> 
                         </div>
                         <button className="sm:hidden">
-                            <img src="burger-menu.png" alt="" className="sm:hidden size-10 relative left-5" />
+                            <motion.img 
+                                whileHover={{scale:1.1}} 
+                                onClick={updateSideBar}
+                                src="burger-menu.png" 
+                                alt="" 
+                                className="sm:hidden size-10 relative left-5" 
+                            />
                         </button>
                     </div>
                 </nav>
+                {/* La Sidebar pour les appareils mobiles */}
+                <Sidebar sidebar={sidebar} setSideBar={setSideBar} />
             </header>
         </>
     )
