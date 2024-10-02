@@ -43,7 +43,11 @@ const SectionRecentPublications = () => {
         // https://jsonplaceholder.typicode.com/posts
         axios.get ('https://jsonplaceholder.typicode.com/posts')
         .then ((response) => {
-            setRecentPublications (response.data)
+            const limitedData = []
+            for (let i = 0; i < 6; i++) {
+                limitedData.push (response.data[i])
+            }
+            setRecentPublications (limitedData)
         })
         .catch ((console.error()
         ))

@@ -6,6 +6,7 @@ import SectionAboutIsaac from "./sectionParcours/sectionAboutIsaac"
 import Accroche from "./section1/accroche"
 import BoutonCta from "../../generalAndPartialsComponents/header/boutonCta"
 import SectionRecentPublications from "./sectionRecentPublications/sectionRecentPublications"
+import SectionDevise from "./sectionDevise/sectionDevise"
 
 
 
@@ -36,6 +37,8 @@ const MainHomePage = () => {
                 <SectionAboutIsaac/>
                 {/* Section pour les publications recents */}
                 <SectionRecentPublications/>
+                {/* Section avec une petite pensee */}
+                <SectionDevise/>
             </main>
         </>
     )
