@@ -4,8 +4,10 @@ import { NavLink } from "react-router-dom";
 const OngletSidebar = ({url, title}) => {
     return (
         <>
-            <div>
-                <NavLink to={url} > {title} </NavLink>
+            <div className="p-5">
+                <NavLink to={url} >
+                    <p className="text-2xl">{title}</p>
+                </NavLink>
             </div>
         </>
     );
