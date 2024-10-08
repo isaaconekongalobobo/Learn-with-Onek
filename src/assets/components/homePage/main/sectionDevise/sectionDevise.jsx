@@ -1,10 +1,10 @@
-import ParticleRing from "./animatedComponent";
+// import ParticleRing from "./animatedComponent";
 
 const SectionDevise = () => {
     return (
         <>
             <section className="relative mt-[780px] sm:mt-[450px]" >
-                <ParticleRing/>
+                {/* <ParticleRing/> */}
             </section>
         </>
     );
