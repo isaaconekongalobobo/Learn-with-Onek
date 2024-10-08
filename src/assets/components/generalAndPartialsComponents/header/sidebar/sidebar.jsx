@@ -26,7 +26,7 @@ const Sidebar = ({sidebar, setSideBar}) => {
         <div className="text-principale text-[18px] flex flex-col gap-5 pt-5">
           {/* Icone pour fermer la sidebar */}
           <CrossCancel action={updateSideBar} />
-          <div className='flex flex-col '>
+          <div className='flex flex-col gap-3'>
             {/* Logotype de l'application */}
             <div>
               <Link to="/" >

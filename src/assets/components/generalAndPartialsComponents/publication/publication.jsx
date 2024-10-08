@@ -1,5 +1,6 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react/prop-types */
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import AuthorImage from "./authorImage";
 import PublicationDetails from "./publicationdetails/publicationDetails";
 import PublicationImage from "./publicationImage";
@@ -15,20 +16,29 @@ const Publication = ({publicationInfo}) => {
     const [likeNumber, setLikeNumber] = useState(publicationInfo.likes || 0)
     const [comments] = useState(publicationInfo.comments)
     const [shares] = useState(publicationInfo.shares)
+    // State pour le titre de la publication
+    const [title, setTitle] = useState(publicationInfo.title)
+    useEffect (() => {
+        const textLength = 20
+        if (title.length > textLength) {
+            setTitle(title.slice(0, textLength) + "...")
+        }
+    })
     return (
         <>
-            <motion.div whileHover={{y:-15}} className="bg-principale p-[5%] w-[120%] sm:w-80 justify-between  sm:p-[2%] rounded-3xl flex flex-col gap-5 shadow-md"> 
-                <div className="flex flex-col" >
-                    <div className="flex gap-4">
-                        <AuthorImage urlImage={publicationInfo.authorImage || '/Mes pics/isaac-speek.jpeg'} />
-                        <div className="flex flex-col relative top-2">
-                            <h2 className="text-white font-medium"> {publicationInfo.firstName || 'Isaac'} {publicationInfo.name || 'Onek'} </h2>                        
-                            <p className="text-xs"> {publicationInfo.publicationdate} </p>
-                        </div>  
-                    </div>   
+            <motion.div whileHover={{y:-15}} className="bg-[#00563B] p-[5%] w-[120%] sm:w-80  sm:p-[2%] rounded-3xl flex flex-col gap-2 shadow-md"> 
+                <div className="flex gap-4 items-center relative sm:static left-4">
+                    <AuthorImage urlImage={publicationInfo.authorImage || '/Mes pics/isaac-speek.jpeg'} />
+                    <div className="flex flex-col">
+                        <h2 className="text-white font-medium"> {publicationInfo.firstName || 'Isaac'} {publicationInfo.name || 'Onek'} </h2>                        
+                        <p className="text-xs text-white"> {publicationInfo.publicationdate || 'Le 06/09/2024'} </p>
+                    </div>  
+                </div>   
+                {/* Titre de l'article */}
+                <div>
+                    <h2 className="relative left-7 sm:left-2 sm:mb-1 text-xl font-medium"> {title} </h2> 
                 </div>
                 <div className="flex flex-col items-center justify-center gap-2 ">
-                    <h2 className="ml-3 text-start"> { publicationInfo.title} </h2>               
                     {/* Lien pour mener au details d'un article */}
                     <Link to={`/tutoriels/:${publicationInfo.id}`}>
                         <PublicationImage urlImage={publicationInfo.pubImage || '/essaieOldPublications/mockuuups-free-gaming-display-mockup.jpg'} />
@@ -39,9 +49,9 @@ const Publication = ({publicationInfo}) => {
                     publicationId={publicationInfo.id || 0} 
                     likes={likeNumber}
                     setLikes={setLikeNumber}
-                    comments={comments}
+                    comments={comments || 0}
                     setComments=""
-                    shares={shares}
+                    shares={shares || 0}
                     setShares=""
                 />
             </motion.div>
