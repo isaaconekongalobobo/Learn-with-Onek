@@ -23,10 +23,9 @@ const Sidebar = ({sidebar, setSideBar}) => {
   return (
     <>
       <motion.nav variants={sidebarVariant} initial="hidden" whileInView="visible" className= {sidebar? " sm:hidden fixed z-30 left-24 bg-white h-full w-[90%] shadow-sm shadow-black" : "hidden" }  >
-        <div className="text-principale text-[18px] flex flex-col gap-5 p-2 pt-5">
+        <div className="text-principale text-[18px] flex flex-col gap-5 pt-5">
           {/* Icone pour fermer la sidebar */}
           <CrossCancel action={updateSideBar} />
-          {/* <span className="" onClick={updateSideBar}>Fermer</span> */}
           <div className='flex flex-col '>
             {/* Logotype de l'application */}
             <div>
