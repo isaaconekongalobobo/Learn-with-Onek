@@ -1,15 +1,11 @@
 /* eslint-disable react/prop-types */
-
-// J'importe framer motion
-// 
-import { motion } from "framer-motion";
-const GeneralButton = (props) => {
+const GeneralButton = ({btnStyle,actionOnClick=() =>{}, text}) => {
     return (
         <>
             <div>
-                <motion.button className={props.btnStyle} onClick={props.actionOnClick}> 
-                    { props.text }
-                </motion.button>
+                <button className={btnStyle} onClick={actionOnClick}> 
+                    { text }
+                </button>
             </div>        
         </>
 

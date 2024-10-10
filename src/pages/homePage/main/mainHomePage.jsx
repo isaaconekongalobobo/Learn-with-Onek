@@ -6,6 +6,7 @@ import SectionAboutIsaac from "./sectionParcours/sectionAboutIsaac"
 import SectionRecentPublications from "../main/sectionRecentPublications/sectionRecentPublications"
 import Accroche from "../main/section1/accroche"
 import BoutonCta from "../../../components/generalAndPartialsComponents/header/boutonCta"
+import SectionChatBot from "./sectionChatBot/sectionChatBot"
 
 
 
@@ -32,12 +33,10 @@ const MainHomePage = () => {
                         </div>                        
                     </div>
                 </div>
-                {/* Section About */}
                 <SectionAbout/>
-                {/* Section About Isaac (Parcours de l'auteur de cette page) */}
                 <SectionAboutIsaac/>
-                {/* Section pour les publications recents */}
                 <SectionRecentPublications/>
+                <SectionChatBot/>
             </main>
         </>
     )
