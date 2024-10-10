@@ -3,14 +3,18 @@ import SectionsTitle from "../../../../components/generalAndPartialsComponents/s
 
 const SectionChatBot = () => {
     return (
-        <section className="relative top-[500px] bg-red-400">
-            <div>
-                <div>
-                   <SectionsTitle text={'Demander à mon chatbot de vous aider, comme un ami !'} /> 
-                </div>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam corrupti libero laboriosam quo cupiditate eum quasi atque. Repudiandae neque et beatae delectus, expedita, veniam deleniti, cum laborum aperiam rerum sequi.</p>
-                <div>
-                    <GeneralButton btnStyle="" text="Voir le bot, c'est gratuit" />
+        <section className="relative top-[680px] sm:top-[420px] p-5 pt-10 sm:pt-14 bg-white flex flex-col gap-5">
+            <div className="text-left">
+                <SectionsTitle text={'Demander à mon chatbot de vous aider, comme un ami !'} /> 
+            </div>
+            <div className="flex flex-col gap-3 w-full">
+                <div className="sm:w-2/4">
+                    <div>
+                        <p className="text-slate-600 text-center sm:text-start">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam corrupti libero laboriosam quo cupiditate eum quasi atque.</p>
+                    </div>
+                    <div>
+                        <GeneralButton btnStyle="" text="Voir le bot, c'est gratuit" />
+                    </div>                    
                 </div>
             </div>
             <div>
