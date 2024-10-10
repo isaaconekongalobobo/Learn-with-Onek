@@ -1,4 +1,4 @@
-import GeneralButton from "../../../generalAndPartialsComponents/generalButton";
+import GeneralButton from "../../../../components/generalAndPartialsComponents/generalButton";
 import TitreAnime from "./titreAnime";
 
 // Importation de framer motion

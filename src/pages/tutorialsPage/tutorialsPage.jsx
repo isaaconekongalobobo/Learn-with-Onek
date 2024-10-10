@@ -1,6 +1,6 @@
-import Header from "../generalAndPartialsComponents/header/header";
+import Header from "../../components/generalAndPartialsComponents/header/header";
 
-const ContactPage = () => {
+const TutorialsPage = () => {
     return (
         <>
             <body>
@@ -12,4 +12,4 @@ const ContactPage = () => {
     );
 }
 
-export default ContactPage;
+export default TutorialsPage;

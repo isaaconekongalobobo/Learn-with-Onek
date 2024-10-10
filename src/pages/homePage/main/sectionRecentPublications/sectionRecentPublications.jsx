@@ -1,9 +1,9 @@
 /* eslint-disable react/prop-types */
 import {motion} from 'framer-motion'
 import { useEffect, useState } from 'react';
-import Publication from '../../../generalAndPartialsComponents/publication/publication';
+import Publication from '../../../../components/generalAndPartialsComponents/publication/publication';
 import NoRecentPublicationsMessage from './noRecentPublicationsMessage';
-import Loader from '../../../generalAndPartialsComponents/loader';
+import Loader from '../../../../components/generalAndPartialsComponents/loader';
 import axios from 'axios';
 
 // Bloc div pour les publications

@@ -2,12 +2,12 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 // Importation de mes differentes composant qui seront ensuite passe au routeur de react-router-dom
-import HomePage from './assets/components/homePage/HomePage'
-import AboutPage from './assets/components/AboutPage/aboutPage'
-import PortFolioPage from './assets/components/portfolioPage/portFolioPage'
-import TutorialsPage from './assets/components/tutorialsPage/tutorialsPage'
-import ContactPage from './assets/components/contactPage/contactPage'
-import PublicationDetail from './assets/components/homePage/main/sectionRecentPublications/publicationDetail/publicationDetail'
+import HomePage from './pages/homePage/HomePage'
+import AboutPage from './pages/AboutPage/aboutPage'
+import PortFolioPage from './pages/portfolioPage/portFolioPage'
+import TutorialsPage from './pages/tutorialsPage/tutorialsPage'
+import ContactPage from './pages/contactPage/contactPage'
+import PublicationDetail from './pages/homePage/main/sectionRecentPublications/publicationDetail/publicationDetail'
 
 // Je cree un routeur pour y enregistrer toutes les URLs de mon application
 const router = createBrowserRouter (

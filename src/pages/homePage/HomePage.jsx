@@ -1,4 +1,4 @@
-import Header from "../generalAndPartialsComponents/header/header.jsx"
+import Header from "../../components/generalAndPartialsComponents/header/header.jsx"
 import MainHomePage from "./main/mainHomePage.jsx"
 
 const HomePage  = () => {
