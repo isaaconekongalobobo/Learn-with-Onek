@@ -9,16 +9,25 @@ const SectionChatBot = () => {
                 <SectionsTitle text={'Demander à mon chatbot de vous aider, comme un ami !'} /> 
             </div>
 
-            <div className="flex gap-3 w-full pt-8">
-                <div className="sm:w-2/4">
+            <div className="flex flex-col sm:flex-row gap-3 w-full pl-5">
+                <div className="sm:w-2/4 sm:pt-10 flex flex-col gap-5">
                     <div>
-                        <p className="text-slate-600 text-center sm:text-start">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam corrupti libero laboriosam quo cupiditate eum quasi atque.</p>
+                        <p className="text-slate-600 sm:text-start">Je suis ravi de vous présenter ma nouvelle fonctionnalité : un chatbot intelligent conçu pour répondre à toutes vos questions éducatives ! Que vous souhaitiez en savoir plus sur un sujet spécifique, obtenir des explications ou simplement explorer de nouvelles idées, ce robot est là pour vous aider, 24/7.</p>
+                        <div className="text-slate-600 mt-2">
+                            <p className="text-[18px] mb-2 text-principale font-dortmund">Pourquoi utiliser mon chatbot ?</p>
+                            <ul className="list-disc pl-5 flex flex-col gap-2" >
+                                <li><strong>Réponses instantanées : </strong>Fini les attentes ! Je vous fournis des réponses immédiates à vos questions.</li>
+                                <li><strong>Facilité d’utilisation : </strong>Il vous suffit de poser votre question pour obtenir des informations claires et précises, facilement accessibles.</li>
+                                <li><strong>Accessibilité : </strong> Disponible à tout moment, je vous accompagne dans votre quête de connaissances, que ce soit sur ordinateur ou mobile.</li>
+                                <li><strong>Guidage personnalisé : </strong>Selon vos intérêts, je vous orienterai vers des ressources pertinentes, vous assurant de trouver rapidement ce que vous cherchez.</li>
+                            </ul>
+                        </div>
                     </div>
                     <div>
-                        <GeneralButton btnStyle="" text="Voir le bot, c'est gratuit" />
+                        <GeneralButton btnStyle="bg-jaune p-3 border hover:bg-principale rounded-full" text="J'essaie, c'est gratuit !" />
                     </div>                    
                 </div>
-                <div className="w-2/4">
+                <div className="sm:w-2/4">
                     <BotAmimatedIllustration/>
                 </div>
             </div>
