@@ -2,7 +2,7 @@
 const BotAmimatedIllustration = () => {
     return (
         <div>
-            <img src="src/assets/Chatbot.gif" alt="Robot" />
+            <img src="/Chatbot.gif" alt="Robot" />
         </div>
     );
 }
