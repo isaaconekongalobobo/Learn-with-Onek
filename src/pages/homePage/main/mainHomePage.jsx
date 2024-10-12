@@ -23,7 +23,7 @@ const MainHomePage = () => {
                             <Accroche text="Viens apprendre avec moi les technos qui vont faconner le futur!" />
                             <p className="text-center">Avec cette plateforme, nous allons tous ensemble explorer cet univers du developpement web, et apprendre des trucs et astuces pour booster ta productivite! <br /> Alors, tu veux essayer ? </p>
                             {/* J'importe le CTA */}
-                            <div className="relative top-5 left-16 sm:left-60 ">
+                            <div className="flex items-center justify-center pt-2">
                                 <BoutonCta/>
                             </div>
                         </div>
