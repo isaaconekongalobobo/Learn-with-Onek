@@ -9,7 +9,7 @@ const Onglet  = (props) => {
             <li>
                 {/* Je passe au props to du composant <Link> l'ancre, cad le chemin sur lequel mene
                 cet onglet. */}
-                <NavLink to={props.ancre}>{props.nom} {props.barre} </NavLink>
+                <NavLink to={props.ancre} className="md:text-[12px] lg:text-lg ">{props.nom} {props.barre} </NavLink>
             </li>
         </>
     )

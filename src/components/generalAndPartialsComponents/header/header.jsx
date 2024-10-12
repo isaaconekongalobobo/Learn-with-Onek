@@ -1,10 +1,11 @@
 import { useState } from "react"
 import BoutonCta from "./boutonCta"
-import Onglet from "./onglet"
 import Sidebar from "./sidebar/sidebar"
 
 // Importation de framer-motion
 import {motion} from 'framer-motion'
+import PageTitle from "./pageTitle"
+import Onglets from "./onglets"
 const Header  = () => {
     // Je creer un state pour gerer l'affichage de la sidebar
     const [sidebar, setSideBar] = useState(false)
@@ -14,32 +15,16 @@ const Header  = () => {
         <>
             <header>
                 <nav>
-                    <div className=" fixed w-full z-20 h-[10%] sm:h-[12%] flex bg-principale  p-6 gap-12 sm:gap-28 justify-around items-center shadow-lg">
-                        <h1 className="relative right-4 text-xs sm:text-xl  font-bold font-dortmund"><strong className="font-pavelt">Learn With Onek</strong></h1>
-                        <ul className="hidden sm:flex gap-5">
-                            {/* J'importe plusieurs fois le composant onglet */}
-                            <Onglet ancre="/" nom="Acceuil" barre="|" />
-                            <Onglet ancre="/about" nom="A propos" barre="|" />
-                            <Onglet ancre="/portfolio" nom="Mon portfolio" barre="|" />
-                            <Onglet ancre="/tutoriels" nom="Tutoriels" barre="|" />
-                            <Onglet ancre="/contact" nom="Contact"  />
-                        </ul>
-                        {/* J'importe le composant pour le CTA */}
-                        <div className="hidden sm:block sm:relative ">
-                            <BoutonCta/> 
-                        </div>
-                        <button className="sm:hidden">
-                            <motion.img 
-                                whileHover={{scale:1.1}} 
-                                onClick={updateSideBar}
-                                src="burger-menu.png" 
-                                alt="" 
-                                className="sm:hidden size-10 relative left-5" 
-                            />
+                    <div className="fixed w-full z-20 h-[10%] sm:h-[12%] md:h-[10%] flex bg-principale p-5 sm:p-10 sm:pl-20 gap-12 sm:gap-28 md:gap-5 justify-around  items-center shadow-lg">
+                        <PageTitle/>
+                        <Onglets/>
+                        <BoutonCta btnStyle="hidden sm:block tablet:hidden  bg-aliceblue text-principale sm:p-[14px] rounded-full lg:text-lg lg:p-4" />
+                        <button className="sm:hidden md:block tablet:block">
+                            <motion.img whileHover={{scale:1.1}} onClick={updateSideBar} src="burger-menu.png" className="size-10 relative left-5"/>
                         </button>
                     </div>
                 </nav>
-                {/* La Sidebar pour les appareils mobiles */}
+                {/* La Sidebar pour les appareils mobiles et tablette */}
                 <Sidebar sidebar={sidebar} setSideBar={setSideBar} />
             </header>
         </>

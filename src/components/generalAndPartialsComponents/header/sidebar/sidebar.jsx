@@ -22,18 +22,18 @@ const Sidebar = ({sidebar, setSideBar}) => {
   const updateSideBar = () => setSideBar (false)
   return (
     <>
-      <motion.nav variants={sidebarVariant} initial="hidden" whileInView="visible" className= {sidebar? " sm:hidden fixed z-30 left-24 bg-white h-full w-[90%] shadow-sm shadow-black" : "hidden" }  >
+      <motion.nav variants={sidebarVariant} initial="hidden" whileInView="visible" className= {sidebar? " sm:hidden tablet:block fixed z-30 left-24 bg-white h-full w-[90%] shadow-sm shadow-black" : "hidden" }  >
         <div className="text-principale text-[18px] flex flex-col gap-5 pt-5">
-          {/* Icone pour fermer la sidebar */}
-          <CrossCancel action={updateSideBar} />
           <div className='flex flex-col gap-3'>
-            {/* Logotype de l'application */}
-            <div>
+            <div className='flex items-center'>
+              {/* Logotype de l'application */}
               <Link to="/" >
                 <h1 className="relative text-sm left-5  font-bold font-dortmund">
                   <strong className="font-pavelt">Learn With Onek</strong>
                 </h1>            
-              </Link>              
+              </Link>   
+              {/* Icone pour fermer la sidebar */}
+              <CrossCancel action={updateSideBar} />               
             </div>
 
             {/* Appel des differents onglets */}

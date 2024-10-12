@@ -32,9 +32,6 @@ export default {
         accroche:'100px',
         sectionPublicationRecents: '600px',
       },
-      screens: {
-        'phone':{'max': '640px'},
-      },
       fontFamily: {
         'impact': ['impact'],
         'dortmund': ['Dortmund-ExtraBold'],
@@ -43,6 +40,10 @@ export default {
       fontSize: {
         titrePhoneDevice: '900px'
       },
+      screens: {
+        'tablet': {'min': '768px', 'max':'1024px'},
+        'desktop': {'min':'2048', 'max':'1152'},
+      }
     },
   },
   plugins: [],
