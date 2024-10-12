@@ -19,7 +19,7 @@ const Header  = () => {
                         <PageTitle/>
                         <Onglets/>
                         <BoutonCta btnStyle="hidden sm:block tablet:hidden  bg-aliceblue text-principale sm:p-[14px] rounded-full lg:text-lg lg:p-4" />
-                        <button className="sm:hidden md:block tablet:block">
+                        <button className="sm:hidden tablet:block">
                             <motion.img whileHover={{scale:1.1}} onClick={updateSideBar} src="burger-menu.png" className="size-10 relative left-5"/>
                         </button>
                     </div>

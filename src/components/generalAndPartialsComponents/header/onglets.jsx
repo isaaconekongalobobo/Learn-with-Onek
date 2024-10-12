@@ -8,7 +8,7 @@ const Onglets = () => {
             <Onglet ancre="/about" nom="A propos" barre="|" />
             <Onglet ancre="/portfolio" nom="Mon portfolio" barre="|" />
             <Onglet ancre="/tutoriels" nom="Tutoriels" barre="|" />
-            <Onglet ancre="/contact" nom="Contact"  />
+            <Onglet ancre="/chatbot" nom="Chatbot"  />
         </ul>
 
     );

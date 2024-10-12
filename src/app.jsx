@@ -8,6 +8,7 @@ import PortFolioPage from './pages/portfolioPage/portFolioPage'
 import TutorialsPage from './pages/tutorialsPage/tutorialsPage'
 import ContactPage from './pages/contactPage/contactPage'
 import PublicationDetail from './pages/homePage/main/sectionRecentPublications/publicationDetail/publicationDetail'
+import ChatbotPage from './pages/chatbotPage/chatbotPage'
 
 // Je cree un routeur pour y enregistrer toutes les URLs de mon application
 const router = createBrowserRouter (
@@ -37,6 +38,11 @@ const router = createBrowserRouter (
       // Page Contacts
       path: '/contact',
       element: <ContactPage/>
+    },
+    // Page pour le chatbot
+    {
+      path: '/chatbot',
+      element: <ChatbotPage/>
     },
     {
       // Details d'une publication
