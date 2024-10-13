@@ -64,7 +64,7 @@ const SectionRecentPublications = () => {
 
     return (
         <>
-            <section className="relative top-[780px] sm:top-[450px] p-14 bg-slate-100 pt-40 sm:pt-32">
+            <section className="relative top-[780px] sm:top-[450px] p-14 bg-slate-100 pt-40 sm:pt-32 z-20">
                 <div className="text-gray-900 flex flex-col items-center">
                     <motion.h1 className='text-principale text-2xl text-center w-96 sm:w-texteSectionParcour font-bold relative bottom-32  sm:bottom-24' >Regarde les dernières  <strong className="text-jaune opacity-90">publications </strong> faites pour toi</motion.h1>
                     <p className="text-center relative  top-[-110px] sm:top-[-80px] w-[320px] sm:w-full">As-tu raté mes derniers posts ? Je te récapitule</p>

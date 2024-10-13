@@ -6,7 +6,10 @@ const Illustration1 = () => {
             <motion.img 
             initial={{x:10, rotate:45}} 
             animate={{x:0, rotate:0}}
-            src="Learning.gif" alt="Illustration 1" className="w-illustration1 tablet:w-[700px] mt-10 relative sm:top-5 rounded-full shadow-lg"/>
+            src="Learning.gif" 
+            alt="Illustration de l'univers de l'apprentissage" 
+            className="w-[100%] relative sm:right-10 rounded-full shadow-lg"
+            />
         </>
     )
 }
