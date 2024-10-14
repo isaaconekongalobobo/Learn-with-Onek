@@ -1,10 +1,10 @@
-import GeneralButton from "../../../../components/generalAndPartialsComponents/generalButton";
+import SecondaryButton from "../../../../components/generalAndPartialsComponents/secondaryButton";
 import SectionsTitle from "../../../../components/generalAndPartialsComponents/sectionsTitle";
 import BotAmimatedIllustration from "./botAmimatedIllustration";
 
 const SectionChatBot = () => {
     return (
-        <section className="relative top-[680px] sm:top-[420px] p-5 pt-10 sm:pt-14 bg-white flex flex-col gap-5">
+        <section className="relative top-[680px] sm:top-[420px] p-5 pt-32 sm:pt-14 bg-white flex flex-col gap-5">
             <div className="text-left">
                 <SectionsTitle text={'Demander à mon chatbot de vous aider, comme un ami !'} /> 
             </div>
@@ -24,7 +24,7 @@ const SectionChatBot = () => {
                         </div>
                     </div>
                     <div>
-                        <GeneralButton btnStyle="bg-jaune p-3 border hover:bg-principale rounded-full" text="J'essaie, c'est gratuit !" />
+                        <SecondaryButton text="J'essaie le robot, c'est gratuit !" />
                     </div>                    
                 </div>
                 <div className="sm:w-2/4">

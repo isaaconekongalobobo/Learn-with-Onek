@@ -8,6 +8,7 @@ import Accroche from "../main/section1/accroche"
 import BoutonCta from "../../../components/generalAndPartialsComponents/header/boutonCta"
 import SectionChatBot from "./sectionChatBot/sectionChatBot"
 import CallToValue from "./callToValue"
+import SectionTemoignage from "./sectionTemoignage/sectionTemoignage"
 
 
 
@@ -37,6 +38,7 @@ const MainHomePage = () => {
                 <SectionAboutIsaac/>
                 <SectionRecentPublications/>
                 <SectionChatBot/>
+                <SectionTemoignage/>
             </main>
         </>
     )

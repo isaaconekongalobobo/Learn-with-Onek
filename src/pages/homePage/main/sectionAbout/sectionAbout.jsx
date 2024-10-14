@@ -1,5 +1,5 @@
-import { NavLink } from "react-router-dom"
 import GalleryLangages from "./galleryLangages"
+import SecondaryButton from "../../../../components/generalAndPartialsComponents/secondaryButton"
 // Importation de framer motion
 
 const SectionAbout = () => {
@@ -21,7 +21,7 @@ const SectionAbout = () => {
                         </div>
                         {/* Bouton pour afficher tout les catalogues, visible uniquement sur pc */}
                         <div className="m-auto hidden sm:block">
-                            <NavLink  to="/tutoriels/modules" className="bg-jaune p-3 rounded-full " >Voir tout le catalogue</NavLink>
+                            <SecondaryButton text="Voir tout le catalogue" />
                         </div>                        
                     </div>
                 </div>
@@ -29,7 +29,7 @@ const SectionAbout = () => {
 
                 {/* Bouton pour afficher tout les catalogues, visible uniquement sur des petites appareils */}
                 <div className="m-auto sm:hidden">
-                            <NavLink  to="/tutoriels/modules" className="bg-jaune p-3 rounded-full " >Voir tout le catalogue</NavLink>
+                    <SecondaryButton text="Voir tout le catalogue" />
                 </div> 
             </section>
         </>

@@ -1,4 +1,4 @@
-import GeneralButton from "../../../../components/generalAndPartialsComponents/generalButton";
+import SecondaryButton from "../../../../components/generalAndPartialsComponents/secondaryButton";
 import TitreAnime from "./titreAnime";
 
 // Importation de framer motion
@@ -46,7 +46,9 @@ const SectionAboutIsaac = () => {
                             {/* Titre anime dans la section About Isaac */}
                             <TitreAnime text={"Je partage ce que j'ai appris via la communeaute dev, mes competences et experiences dans le developpement web.Via mon portfolio, je vous fais decouvrir ce que peux faire..."}/>
                             <p className="sm:w-texteSectionParcour text-gray-900 relative bottom-36 sm:bottom-16 left-3 ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati iusto eveniet minima praesentium perferendis a! Quam voluptates est natus id aspernatur qui. Consequuntur earum odio aspernatur, ullam repudiandae ducimus libero.</p>
-                            <GeneralButton text="Voir le Portfolio" btnStyle="text-white p-4 sm:p-3 rounded-full bg-principale relative bottom-32  sm:bottom-12 hover:bg-jaune border-2 left-2" />                            
+                            <div>
+                                <SecondaryButton text="Voir le portfoliot" />
+                            </div>
                         </div>
                     </div>
                 </div>
