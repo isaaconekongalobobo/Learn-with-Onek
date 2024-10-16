@@ -46,7 +46,7 @@ const SectionAboutIsaac = () => {
                             {/* Titre anime dans la section About Isaac */}
                             <TitreAnime text={"Je partage ce que j'ai appris via la communeaute dev, mes competences et experiences dans le developpement web.Via mon portfolio, je vous fais decouvrir ce que peux faire..."}/>
                             <p className="sm:w-texteSectionParcour text-gray-900 relative bottom-36 sm:bottom-16 left-3 ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati iusto eveniet minima praesentium perferendis a! Quam voluptates est natus id aspernatur qui. Consequuntur earum odio aspernatur, ullam repudiandae ducimus libero.</p>
-                            <div>
+                            <div className="relative left-3 bottom-32 sm:bottom-10 ">
                                 <SecondaryButton text="Voir le portfoliot" />
                             </div>
                         </div>
