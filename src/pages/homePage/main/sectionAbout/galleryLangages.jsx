@@ -28,7 +28,7 @@ const iconsStyle = "size-24 sm:size-32"
 const GalleryLangages = () => {
     return (
         <>
-            <motion.div className=" size- grid grid-cols-3 sm:grid-cols-1 xl:grid-cols-3 gap-3.5 px-4 py-3 " variants={allIconsVariant} initial="hidden" whileInView="visible" >
+            <motion.div className=" size- grid grid-cols-3 sm:grid-cols-1 tablet:grid-cols-3 xl:grid-cols-3 gap-3.5 px-4 py-3 " variants={allIconsVariant} initial="hidden" whileInView="visible" >
               <NavLink to="/tutoriels/module/:html" >
                 <Html style={iconsStyle}/>
               </NavLink>
