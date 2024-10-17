@@ -56,12 +56,12 @@ const SectionTemoignage = () => {
     <section className="py-12 bg-gradient-to-br from-emerald-500 to-emerald-900 relative top-[680px] sm:top-96">
     <div className="container mx-auto px-4">
         <motion.h2 
-          className="text-4xl font-bold text-center text-white mb-4"
+          className="text-2xl text-center font-bold"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          Ce que disent nos clients
+          Ils ont tire profit de cette plateforme, ils en parlent...
         </motion.h2>
         <motion.p 
           className="text-xl text-center text-white mb-12"
