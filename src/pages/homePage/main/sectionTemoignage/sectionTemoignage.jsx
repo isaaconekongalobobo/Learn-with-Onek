@@ -1,5 +1,6 @@
 import { useRef, useEffect } from 'react'
 import { motion } from 'framer-motion'
+import SectionsTitle from '../../../../components/generalAndPartialsComponents/sectionsTitle'
 
 const testimonials = [
   {
@@ -29,6 +30,9 @@ const testimonials = [
   }
 ]
 
+// Texte pour le titre
+const titleText = "Ils ont tire profit de cette plateforme, ils en parlent..."
+
 const SectionTemoignage = () => {
   const scrollRef = useRef(null)
 
@@ -55,14 +59,7 @@ const SectionTemoignage = () => {
   return (
     <section className="py-12 bg-gradient-to-br from-emerald-500 to-emerald-900 relative top-[680px] sm:top-96">
     <div className="container mx-auto px-4">
-        <motion.h2 
-          className="text-2xl text-center font-bold"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          Ils ont tire profit de cette plateforme, ils en parlent...
-        </motion.h2>
+        <SectionsTitle text={titleText} color='#ffffff' />
         <motion.p 
           className="text-xl text-center text-white mb-12"
           initial={{ opacity: 0, y: -20 }}
