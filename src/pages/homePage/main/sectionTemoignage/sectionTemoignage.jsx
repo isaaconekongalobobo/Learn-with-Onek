@@ -1,6 +1,8 @@
 import { useRef, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import SectionsTitle from '../../../../components/generalAndPartialsComponents/sectionsTitle'
+import SubTitle from '../../../../components/generalAndPartialsComponents/subTitle'
+import BtnScroll from './btnScroll'
 
 const testimonials = [
   {
@@ -29,9 +31,14 @@ const testimonials = [
     image: "/placeholder.svg?height=100&width=100"
   }
 ]
-
 // Texte pour le titre
 const titleText = "Ils ont tire profit de cette plateforme, ils en parlent..."
+// Variant pour laa div des temoignage
+const DivVariant = {
+  hidden : { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 },
+  transition: { duration: 0.5, delay: 0.1 }
+}
 
 const SectionTemoignage = () => {
   const scrollRef = useRef(null)
@@ -52,63 +59,20 @@ const SectionTemoignage = () => {
     }
   }, [])
 
-  const scroll = (scrollOffset) => {
-    scrollRef.current.scrollLeft += scrollOffset
-  }
-
   return (
     <section className="py-12 bg-gradient-to-br from-emerald-500 to-emerald-900 relative top-[680px] sm:top-96">
-    <div className="container mx-auto px-4">
-        <SectionsTitle text={titleText} color='#ffffff' />
-        <motion.p 
-          className="text-xl text-center text-white mb-12"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        >
-          Découvrez les expériences de ceux qui nous font confiance
-        </motion.p>
+      <div className="container mx-auto px-4">
+        <div className='flex flex-col gap-3'>
+          <SectionsTitle text={titleText} color='#ffffff' />
+          <SubTitle text="Découvrez les expériences des personnes qui ont se sont forme grace a cette plateforme et qui partagent leur experience" color='#ffffff' />
+        </div>
         <div className="relative">
-          <button 
-            onClick={() => scroll(-300)} 
-            className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-30 hover:bg-opacity-50 rounded-full p-2 z-10"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-            </svg>
-          </button>
-          <button 
-            onClick={() => scroll(300)} 
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-30 hover:bg-opacity-50 rounded-full p-2 z-10"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
-          <div 
-            ref={scrollRef} 
-            className="flex overflow-x-auto space-x-6 py-4"
-            style={{ 
-              scrollSnapType: 'x mandatory',
-              scrollbarWidth: 'none',
-              msOverflowStyle: 'none'
-            }}
-          >
+          <BtnScroll scrollRef={scrollRef} scrollOffset={-300} />
+          <div ref={scrollRef} className="flex overflow-x-auto space-x-6 py-4"style={{ scrollSnapType: 'x mandatory',scrollbarWidth: 'none',msOverflowStyle: 'none'}}>
             {testimonials.map((testimonial, index) => (
-              <motion.div
-                key={index}
-                className="flex-shrink-0 w-80 bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-xl p-6 shadow-xl"
-                style={{ scrollSnapAlign: 'start' }}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
+              <motion.div key={index} className="flex-shrink-0 w-80 bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-xl p-6 shadow-xl" style={{ scrollSnapAlign: 'start' }} variants={DivVariant} initial="hidden" whileInView="visible" whileHover={{y:-15,}} transition="transition" >
                 <div className="flex items-center mb-4">
-                  <img 
-                    src={testimonial.image} 
-                    alt={testimonial.name} 
-                    className="w-16 h-16 rounded-full mr-4 object-cover"
-                  />
+                  <img src={testimonial.image} alt={testimonial.name} className="w-16 h-16 rounded-full mr-4 object-cover"/>
                   <h3 className="text-xl font-semibold text-white">{testimonial.name}</h3>
                 </div>
                 <p className="text-white">{testimonial.comment}</p>
