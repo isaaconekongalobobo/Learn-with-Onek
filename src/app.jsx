@@ -9,6 +9,8 @@ import TutorialsPage from './pages/tutorialsPage/tutorialsPage'
 import ContactPage from './pages/contactPage/contactPage'
 import PublicationDetail from './pages/homePage/main/sectionRecentPublications/publicationDetail/publicationDetail'
 import ChatbotPage from './pages/chatbotPage/chatbotPage'
+import LoginPage from './pages/loginPage/loginPage'
+import SignInPage from './pages/signInPage/signInPage'
 
 // Je cree un routeur pour y enregistrer toutes les URLs de mon application
 const router = createBrowserRouter (
@@ -49,6 +51,18 @@ const router = createBrowserRouter (
       path: '/tutoriels/:id',
       element: <PublicationDetail/>
     },
+    {
+      path: '/login',
+      element: <LoginPage/>
+    },
+    {
+      path: '/signIn',
+      element: <SignInPage/>
+    },
+    {
+      path: '/newsletters',
+      element: ''
+    }
     
   ]
 )
