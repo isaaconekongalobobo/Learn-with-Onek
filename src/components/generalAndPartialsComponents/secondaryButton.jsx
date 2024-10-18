@@ -1,13 +1,16 @@
 /* eslint-disable react/prop-types */
 import {motion} from 'framer-motion'
+import { useNavigate } from 'react-router-dom'
 const btnVariant= {
     whenHover: {
         scale: 1.1, x:20
     }
 }
 const SecondaryButton = ({text, url}) => {
+    // Use navigate est un hook de react qui permet de naviguer entre differentes url 
+    const navigate = useNavigate()
     const redirect = (url) => {
-        window.location.href = url
+        navigate (url)
     }
     return (
         <motion.button className="bg-[#7ED218] p-4 pl-5 pr-5 flex items-center gap-3 rounded" onClick={()=> {redirect(url)}} variants={btnVariant} whileHover={"whenHover"} >
