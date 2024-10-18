@@ -1,9 +1,10 @@
+/* eslint-disable react/prop-types */
 import OngletFooter from "./ongletFooter";
 import SocialMediaSection from "./socialMedias/socialMediaSection";
 
-const Footer = () => {
+const Footer = ({topPhone='680', topPc='96'}) => {
     return (
-        <footer className="bg-slate-50 p-5 relative top-[680px]  sm:top-96">
+        <footer className={`bg-slate-50 p-5 relative top-[${topPhone}px]  sm:top-${topPc}`}>
             <div className="flex flex-col gap-4 items-center sm:flex-row">
                 <div className="flex flex-col sm:flex-row sm:w-1/4 justify-center items-center sm:pt-10">
                     <img src="/sectionAboutIsaac/all.png" alt="logotype de Learn with Onek" className="w-28" />
