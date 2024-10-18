@@ -47,16 +47,12 @@ const SectionAboutIsaac = () => {
                             <TitreAnime text={"Je partage ce que j'ai appris via la communeaute dev, mes competences et experiences dans le developpement web.Via mon portfolio, je vous fais decouvrir ce que peux faire..."}/>
                             <p className="sm:w-texteSectionParcour text-gray-900 relative bottom-36 sm:bottom-16 left-3 ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati iusto eveniet minima praesentium perferendis a! Quam voluptates est natus id aspernatur qui. Consequuntur earum odio aspernatur, ullam repudiandae ducimus libero.</p>
                             <div className="relative left-3 bottom-32 sm:bottom-10 ">
-                                <SecondaryButton text="Voir le portfoliot" />
+                                <SecondaryButton text="Voir le portfoliot" url="/portfolio" />
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            {/* <div className='opacity-0'>
-                <img src="/sectionAboutIsaac/bg-about-isaac.jpg" alt="Initial isaac onek"  className='' />
-            </div> */}
-
         </div>
     );
 }

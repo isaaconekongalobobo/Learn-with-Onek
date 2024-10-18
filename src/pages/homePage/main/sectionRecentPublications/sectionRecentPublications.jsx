@@ -5,6 +5,7 @@ import Publication from '../../../../components/generalAndPartialsComponents/pub
 import NoRecentPublicationsMessage from './noRecentPublicationsMessage';
 import Loader from '../../../../components/generalAndPartialsComponents/loader';
 import axios from 'axios';
+import SecondaryButton from '../../../../components/generalAndPartialsComponents/secondaryButton';
 
 // Bloc div pour les publications
 const BlocPuclications = ({recentPublications, setRecentPublications,loader}) => {
@@ -71,6 +72,9 @@ const SectionRecentPublications = () => {
                 </div>
                 {/* Bloc pour les publications */}
                 <BlocPuclications recentPublications={recentPublications} setRecentPublications={setRecentPublications}  loader={loader} />
+                <div className='flex justify-center'>
+                    <SecondaryButton text="Voir plus des publications" url="/tutoriels" />
+                </div>
             </section>
         </>
     );

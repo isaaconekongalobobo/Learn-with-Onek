@@ -21,7 +21,7 @@ const SectionAbout = () => {
                         </div>
                         {/* Bouton pour afficher tout les catalogues, visible uniquement sur pc */}
                         <div className="m-auto hidden tablet:hidden sm:block sm:relative sm:right-1/3 bottom-5 ">
-                            <SecondaryButton text="Voir tout le catalogue" />
+                            <SecondaryButton text="Voir tout le catalogue" url="/about" />
                         </div>                        
                     </div>
                 </div>
@@ -29,7 +29,7 @@ const SectionAbout = () => {
 
                 {/* Bouton pour afficher tout les catalogues, visible uniquement sur des petites appareils */}
                 <div className="m-auto sm:hidden tablet:block">
-                    <SecondaryButton text="Voir tout le catalogue" />
+                    <SecondaryButton text="Voir tout le catalogue" url="/about" />
                 </div> 
             </section>
         </>

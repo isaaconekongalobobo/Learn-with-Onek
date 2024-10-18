@@ -24,7 +24,7 @@ const SectionChatBot = () => {
                         </div>
                     </div>
                     <div>
-                        <SecondaryButton text="J'essaie le robot, c'est gratuit !" />
+                        <SecondaryButton text="J'essaie le robot, c'est gratuit !" url="/chatbot" />
                     </div>                    
                 </div>
                 <div className="sm:w-2/4">
