@@ -8,13 +8,10 @@ import axios from 'axios';
 import SecondaryButton from '../../../../components/generalAndPartialsComponents/secondaryButton';
 
 // Bloc div pour les publications
-const BlocPuclications = ({recentPublications, setRecentPublications,loader}) => {
-    if (loader) {
-        return <Loader/>
-    } else if (recentPublications.length === 0) {
+const BlocPuclications = ({recentPublications, setRecentPublications}) => {
+    if(recentPublications.length === 0) {
         return <NoRecentPublicationsMessage/>
     } 
-
     return (
         <div className='flex flex-col sm:flex-row relative top-[-80px] sm:top-[-40px] sm:flex-wrap gap-5 justify-center items-center'>
             {
@@ -22,8 +19,7 @@ const BlocPuclications = ({recentPublications, setRecentPublications,loader}) =>
                     // Chaque publication se trouve dans un lien fais avec la balise <Link> et c'est a partir de ce lien la que 
                     // je vais recuperer l'id passe en parametre de l'url afin d'afficher a l'utilisateur les details sur l'article
                     //  selectionne
-                        <Publication key={pub.id}  publicationInfo={pub} setPublicationInfo={setRecentPublications} />
-                    
+                    <Publication key={pub.id}  publicationInfo={pub} setPublicationInfo={setRecentPublications} />
                 ))
             }
         </div>
@@ -71,10 +67,8 @@ const SectionRecentPublications = () => {
                     <p className="text-center relative  top-[-110px] sm:top-[-80px] w-[320px] sm:w-full">As-tu raté mes derniers posts ? Je te récapitule</p>
                 </div>
                 {/* Bloc pour les publications */}
-                <BlocPuclications recentPublications={recentPublications} setRecentPublications={setRecentPublications}  loader={loader} />
-                <div className='flex justify-center'>
-                    <SecondaryButton text="Voir plus des publications" url="/tutoriels" />
-                </div>
+                {loader? <Loader/> : <BlocPuclications recentPublications={recentPublications} setRecentPublications={setRecentPublications}  loader={loader} /> }
+                {loader? null : <div className='flex justify-center'><SecondaryButton text="Voir plus des publications" url="/tutoriels" /></div>}
             </section>
         </>
     );
