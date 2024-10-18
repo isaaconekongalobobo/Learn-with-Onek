@@ -32,7 +32,7 @@ const testimonials = [
   }
 ]
 // Texte pour le titre
-const titleText = "Ils ont tire profit de cette plateforme, ils en parlent..."
+const titleText = "Ils ont tiré profit de cette plateforme, ils en parlent..."
 // Variant pour laa div des temoignage
 const DivVariant = {
   hidden : { opacity: 0, y: 20 },
@@ -64,7 +64,7 @@ const SectionTemoignage = () => {
       <div className="container mx-auto px-4">
         <div className='flex flex-col gap-3'>
           <SectionsTitle text={titleText} color='#ffffff' />
-          <SubTitle text="Découvrez les expériences des personnes qui ont se sont forme grace a cette plateforme et qui partagent leur experience" color='#ffffff' />
+          <SubTitle text="Découvrez les expériences des personnes qui ont se sont forme grâce a cette plateforme et qui partagent leur expérience" color='#ffffff' />
         </div>
         <div className="relative">
           <BtnScroll scrollRef={scrollRef} scrollOffset={-300} />
