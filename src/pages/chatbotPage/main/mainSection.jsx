@@ -1,5 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
+const apiKey = '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'
 import SectionsTitle from "../../../components/generalAndPartialsComponents/sectionsTitle";
 import ChatForm from "./chatForm/chatForm";
 // J'importe les differents methode et propriete du module openAI
@@ -7,7 +8,7 @@ import OpenAI from "openai";
 import ChatSection from "./chatSection/chatSection";
 import Loader from "../../../components/generalAndPartialsComponents/loader";
 const openAI = new OpenAI ({
-    apiKey: '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',
+    apiKey: apiKey,
     dangerouslyAllowBrowser: true 
 })
 
