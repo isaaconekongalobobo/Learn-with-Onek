@@ -1,12 +1,13 @@
+/* eslint-disable react/prop-types */
 import BtnSubmit from "./btnSubmit";
 import { useForm } from 'react-hook-form';
 
-const ChatForm = () => {
+const ChatForm = ({setUserQuestion}) => {
     const {register, handleSubmit} = useForm ()
     const whenSubmit = (data) => {
         // Je recupere la questin de l'utilisateur
         const {question} = data
-        console.log(`Votre question est : ${question}`);
+        setUserQuestion (question)
     }
     return (
         <div>
