@@ -1,0 +1,3 @@
+window.env = {
+  "APP_APIKEY": "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"
+};

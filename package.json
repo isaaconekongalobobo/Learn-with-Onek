@@ -13,6 +13,7 @@
     "@react-three/drei": "^9.114.0",
     "@react-three/fiber": "^8.17.9",
     "axios": "^1.7.7",
+    "dotenv": "^16.4.5",
     "framer-motion": "^11.5.4",
     "lucide-react": "^0.441.0",
     "openai": "^4.68.0",
