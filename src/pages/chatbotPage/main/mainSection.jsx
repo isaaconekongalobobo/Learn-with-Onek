@@ -4,12 +4,11 @@ import SectionsTitle from "../../../components/generalAndPartialsComponents/sect
 import ChatForm from "./chatForm/chatForm";
 // J'importe les differents methode et propriete du module openAI
 import OpenAI from "openai";
-// Importation des variables d'envirronnement
-const env = import.meta.env
 import ChatSection from "./chatSection/chatSection";
 import Loader from "../../../components/generalAndPartialsComponents/loader";
+const ai = import.meta.env.VITE_AI
 const openAI = new OpenAI ({
-    apiKey: env.VITE_REACT_APP_API_KEY,
+    apiKey: ai,
     dangerouslyAllowBrowser: true 
 })
 
