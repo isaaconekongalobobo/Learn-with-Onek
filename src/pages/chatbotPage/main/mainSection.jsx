@@ -12,7 +12,7 @@ const MainSection = () => {
     const [error, setError] = useState (false)
     return (
         <main className="relative top-20 p-10 h-full">
-            <section className="flex flex-col gap-3">
+            <section className="flex flex-col gap-5">
                 <div className="flex justify-center">
                     <img className="w-48" src="/sectionAboutIsaac/all.png" alt="Icone lean with Onek" />
                 </div>

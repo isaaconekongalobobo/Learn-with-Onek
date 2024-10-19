@@ -12,7 +12,7 @@ const ChatForm = ({setUserQuestion}) => {
     return (
         <div>
             <form onSubmit={handleSubmit (whenSubmit)} className="flex flex-col sm:flex-row gap-2 justify-center items-center">
-                <input type="text" placeholder="Entrez votre question" {...register('question')}  className=" sm:w-2/4 p-3 pl-5 bg-[#1B4D3E] rounded-full " />
+                <input type="text" placeholder="Entrez votre question" {...register('question')}  className=" w-full sm:w-2/4 p-4 sm:p-3 pl-5 bg-[#1B4D3E] rounded-full " />
                 <BtnSubmit/>
             </form>
         </div>
