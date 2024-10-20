@@ -1,15 +1,42 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-unused-vars */
 import { useEffect, useState } from "react";
 import SectionsTitle from "../../../components/generalAndPartialsComponents/sectionsTitle";
 import ChatForm from "./chatForm/chatForm";
 import ChatSection from "./chatSection/chatSection";
 import Loader from "../../../components/generalAndPartialsComponents/loader";
+import axios from "axios";
 
 const MainSection = () => {
     const [userQuestion, setUserQuestion] = useState ('') 
     const [chats, setChats] = useState()
-    const [isTyping, setIsTyping] = useState(false)
+    const [firstMount, setFirstMount] = useState(true)
+    const [isLoading, setIsLoading] = useState(false)
     const [error, setError] = useState (false)
+    const makeRequest =async () => {
+        if (!firstMount && userQuestion.length !== 0) {
+            const data = {userQuestion}
+            setIsLoading (true)
+            await axios.post ('http://localhost:3000/learn-with-onek/ai/prompt', JSON.stringify(data),{
+                headers: {
+                    'Content-type': 'application/json',
+                    'Accept': 'application/json'
+                }
+            })
+            .then ((response) => {
+                setFirstMount (false)
+            }).catch ((error) => {
+                console.log(`Erreur: ${error}`);
+            }).finally (() => {
+                setIsLoading (false)
+            })            
+        }
+
+    }
+    useEffect (() => {
+        makeRequest ()
+    }, [userQuestion])
+    
     return (
         <main className="relative top-20 p-10 h-full">
             <section className="flex flex-col gap-5">
@@ -19,9 +46,9 @@ const MainSection = () => {
                 <div>
                     <SectionsTitle text="Pose moi ta question" />
                 </div>
-                <ChatForm setUserQuestion={setUserQuestion} />
+                <ChatForm setUserQuestion={setUserQuestion} setFirstMount={setFirstMount} />
             </section>
-            {isTyping? <Loader/>: <ChatSection chats={chats} error={error} /> }
+            {isLoading? <Loader/>: <ChatSection chats={chats} error={error} /> }
         </main>
     );
 }

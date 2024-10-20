@@ -2,11 +2,12 @@
 import BtnSubmit from "./btnSubmit";
 import { useForm } from 'react-hook-form';
 
-const ChatForm = ({setUserQuestion}) => {
+const ChatForm = ({setUserQuestion, setFirstMount}) => {
     const {register, handleSubmit} = useForm ()
     const whenSubmit = (data) => {
         // Je recupere la question de l'utilisateur
         const {question} = data
+        setFirstMount (false)
         setUserQuestion (question)
     }
     return (
