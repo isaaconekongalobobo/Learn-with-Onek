@@ -19,7 +19,7 @@ const MainSection = () => {
             setIsLoading (true)
             const data = {userQuestion}
             try {
-                await axios.post ('http://localhost:3000/learn-with-onek/ai/prompt', JSON.stringify(data),{
+                await axios.post (import.meta.env.VITE_REACT_APP_ENDPOINT_CHATBOT_API, JSON.stringify(data),{
                     headers: {
                         'Content-type': 'application/json',
                         'Accept': 'application/json'
