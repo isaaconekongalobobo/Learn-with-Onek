@@ -6,30 +6,36 @@ import ChatForm from "./chatForm/chatForm";
 import ChatSection from "./chatSection/chatSection";
 import Loader from "../../../components/generalAndPartialsComponents/loader";
 import axios from "axios";
+import ErrorSection from "./chatSection/errorSection";
 
 const MainSection = () => {
     const [userQuestion, setUserQuestion] = useState ('') 
     const [chats, setChats] = useState()
     const [firstMount, setFirstMount] = useState(true)
     const [isLoading, setIsLoading] = useState(false)
-    const [error, setError] = useState (false)
-    const makeRequest =async () => {
+    const [error, setError] = useState ({isError:false, message:''})
+    const makeRequest = async () => {
         if (!firstMount && userQuestion.length !== 0) {
-            const data = {userQuestion}
             setIsLoading (true)
-            await axios.post ('http://localhost:3000/learn-with-onek/ai/prompt', JSON.stringify(data),{
-                headers: {
-                    'Content-type': 'application/json',
-                    'Accept': 'application/json'
+            const data = {userQuestion}
+            try {
+                await axios.post ('http://localhost:3000/learn-with-onek/ai/prompt', JSON.stringify(data),{
+                    headers: {
+                        'Content-type': 'application/json',
+                        'Accept': 'application/json'
+                    }
+                }).then ((response) => {
+                    console.log(`Requette effectue!`);
+                }).finally (() => {
+                    setIsLoading (false)
+                })                
+            } catch (error) {
+                if (error.response.status === 403) {
+                    console.log(`Erreur: ${error.message}`);
+                    setError ({isError:true, message:error.response.data.message})
+                    setIsLoading (false)
                 }
-            })
-            .then ((response) => {
-                setFirstMount (false)
-            }).catch ((error) => {
-                console.log(`Erreur: ${error}`);
-            }).finally (() => {
-                setIsLoading (false)
-            })            
+            }           
         }
 
     }
@@ -48,7 +54,8 @@ const MainSection = () => {
                 </div>
                 <ChatForm setUserQuestion={setUserQuestion} setFirstMount={setFirstMount} />
             </section>
-            {isLoading? <Loader/>: <ChatSection chats={chats} error={error} /> }
+            {isLoading && <Loader/>}
+            {error && <ErrorSection message={error.message} />}
         </main>
     );
 }
