@@ -30,8 +30,10 @@ const MainSection = () => {
                     setIsLoading (false)
                 })                
             } catch (error) {
-                if (error.response.status === 403) {
-                    console.log(`Erreur: ${error.message}`);
+                if (error.code === 'ERR_NETWORK') {
+                    setError ({isError:true, message:"Oops! il semble que vous avez un probleme de connexion..."})
+                    setIsLoading (false)
+                }else if (error.response.status === 403) {
                     setError ({isError:true, message:error.response.data.message})
                     setIsLoading (false)
                 }
