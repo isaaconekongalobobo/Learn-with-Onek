@@ -10,9 +10,9 @@ const Section1 = () => {
                     <div>
                         <h1 className=" text-[35px] sm:text-[50px] font-medium">Isaac Onek</h1>
                         <div>
-                            <ItemCompetence text={"Web developper | "} animationDelay={1} />
-                            <ItemCompetence text={"Graphic designer | "} animationDelay={1.5} />
-                            <ItemCompetence text={"Web Designer "} animationDelay={2} />
+                            <ItemCompetence text={"Web developper | "} animationDelay={1} description="Le developpement web est..." />
+                            <ItemCompetence text={"Graphic designer | "} animationDelay={1.5} description="Le disgn graphique est..." />
+                            <ItemCompetence text={"Web Designer "} animationDelay={2} description="Le web design est..." />
                         </div>
                     </div>
                     <div>
