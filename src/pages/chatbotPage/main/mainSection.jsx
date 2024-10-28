@@ -14,6 +14,10 @@ const MainSection = () => {
     const [firstMount, setFirstMount] = useState(true)
     const [isLoading, setIsLoading] = useState(false)
     const [error, setError] = useState ({isError:false, message:''})
+    // utilisation cette classe pour controller le temps d'execution de la requette
+    const controller = new AbortController ()
+    const timeOut = setTimeout (()=> controller.abort (),5000)
+    
     const makeRequest = async () => {
         if (!firstMount && userQuestion.length !== 0) {
             setIsLoading (true)
@@ -23,7 +27,8 @@ const MainSection = () => {
                     headers: {
                         'Content-type': 'application/json',
                         'Accept': 'application/json'
-                    }
+                    },
+                    signal: controller.signal
                 }).then ((response) => {
                     console.log(`Requette effectue!`);
                 }).finally (() => {
@@ -36,6 +41,9 @@ const MainSection = () => {
                 }else if (error.response.status === 403) {
                     setError ({isError:true, message:error.response.data.message})
                     setIsLoading (false)
+                }
+                if (error.name === 'AbortError') {
+                    setError ({isError:true, message:"Le temps de la requete s'est ecoulee"})
                 }
             }           
         }
