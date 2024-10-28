@@ -39,13 +39,13 @@ const TextAnimated = (props) => {
 const mots = props.text.split(" ");
 
   return (
-    <motion.div className={props.styleText} style={{ overflow: "hidden"}} variants={container} initial="hidden" animate="visible">
+    <motion.p className={props.styleText} style={{ overflow: "hidden"}} variants={container} initial="hidden" animate="visible">
       {mots.map((word, index) => (
         <motion.span className={props.textColor || "text-principale"} variants={child} style={{ marginRight: "5px" }} key={index}>
           {word}
         </motion.span>
       ))}
-    </motion.div>
+    </motion.p>
   );
 }
 
