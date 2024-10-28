@@ -4,7 +4,7 @@ import MyProfile from "./myProfile";
 
 const Section1 = () => {
     return (
-        <section className="bg-[#1B4D3E] p-10" >
+        <section className="p-10 flex flex-col gap-5 sm:gap-10" >
             <div className="flex flex-col sm:flex-row sm:gap-5">
                 <MyProfile/>  
                 <div className="">
@@ -17,11 +17,8 @@ const Section1 = () => {
                         </div>
                         <DescriptionText text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos est similique vero iusto architecto distinctio sint non aperiam animi! Suscipit magnam quia vero, quibusdam mollitia consequuntur placeat omnis corporis soluta?" />
                     </div>
-                    <div>
-
-                    </div>
                 </div>              
-            </div>
+            </div>          
         </section>
     );
 }

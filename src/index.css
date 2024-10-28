@@ -12,6 +12,10 @@
   color: #F4C431;
   font-weight: bold;
 }
+.active span {
+  color: #ffffff
+}
+
 
 @tailwind base;
 @tailwind components;
