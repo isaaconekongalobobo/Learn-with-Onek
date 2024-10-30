@@ -1,5 +1,6 @@
 import {motion} from 'framer-motion'
 import Onglet from "./onglet";
+import AboutSection from './otherSections/sectionAbout/aboutSection';
 // Variant pour la section
 const sectionVariant = {
     hidden: {
@@ -18,12 +19,13 @@ const Section2 = () => {
         <motion.section variants={sectionVariant} initial="hidden" animate="visible" className="p-10 pt-0 flex flex-col gap-5 sm:gap-10">
             <div>
                 <div className="flex justify-between sm:justify-center sm:gap-20 text-sm relative top-[-30px] sm:static ">
-                    <Onglet to="" text="A propos"/>
-                    <Onglet to="" text="Projets"/>
-                    <Onglet to="" text="Designs"/>
-                    <Onglet to="" text="Feeds"/>
+                    <Onglet to="#about" text="A propos"/>
+                    <Onglet to="#projets" text="Projets"/>
+                    <Onglet to="#designs" text="Designs"/>
+                    <Onglet to="#feeds" text="Feeds"/>
                 </div>
             </div>
+            <AboutSection/>
         </motion.section>
     );
 }
