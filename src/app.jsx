@@ -11,7 +11,16 @@ import PublicationDetail from './pages/homePage/main/sectionRecentPublications/p
 import ChatbotPage from './pages/chatbotPage/chatbotPage'
 import LoginPage from './pages/loginPage/loginPage'
 import SignInPage from './pages/signInPage/signInPage'
+import AboutSection from './pages/portfolioPage/section2/otherSections/sectionAbout/aboutSection'
+import ProjectSection from './pages/portfolioPage/section2/otherSections/sectionProjet/projectSection'
+import DesignSection from './pages/portfolioPage/section2/otherSections/sectionDesigns/designSection'
+import FeedSection from './pages/portfolioPage/section2/otherSections/sectionFeeds/feedSection'
 
+// const PortfolioPage = () => {
+//   <Route path='/portfolio'>
+
+//   </Route>
+// }
 // Je cree un routeur pour y enregistrer toutes les URLs de mon application
 const router = createBrowserRouter (
   [
@@ -29,7 +38,13 @@ const router = createBrowserRouter (
     {
       // Page Portfolio
       path: '/portfolio',
-      element: <PortFolioPage/>
+      element: <PortFolioPage/>,
+      children: [
+        { path:'about', element: <AboutSection/> },
+        {path:'projets', element: <ProjectSection/>},
+        {path:'designs', element: <DesignSection/> },
+        {path:'feeds', element: <FeedSection/>},
+      ]
     },
     {
       // Page Tutoriels
