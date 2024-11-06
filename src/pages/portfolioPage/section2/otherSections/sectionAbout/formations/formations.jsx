@@ -27,18 +27,28 @@ const formationTable = [
         date:'juille 2023'
     },
 ]
+const blocVariant = {
+    hidden: {
+        opacity:0,
+        x: -20,
+    },
+    visible: {
+        opacity:1,
+        x:0,
+    }
+}
 
 const Formations = () => {
     return (
         <motion.div className='sm:p-5 flex flex-col gap-5' >
             <h2 className='text-[#1E293B] font-medium text-xl '>Formations</h2>
-            <div className='flex flex-col sm:gap-5'>
+            <motion.div className='flex flex-col sm:gap-5' variants={blocVariant} initial="hidden" animate="visible">
                 {
                     formationTable.map ((formation) => (
                         <ItemFormation key={formation.id} title={formation.title} description={formation.description} school={formation.school} schollWebsite={formation.schoolWebsite} date={formation.date} />
                     ))
                 }                
-            </div>
+            </motion.div>
         </motion.div>
     );
 }
