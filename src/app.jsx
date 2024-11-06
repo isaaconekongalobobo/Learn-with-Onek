@@ -1,4 +1,3 @@
-// Importation de la methode createBrowserRouter a partir de react-router
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 // Importation de mes differentes composant qui seront ensuite passe au routeur de react-router-dom
@@ -16,12 +15,6 @@ import ProjectSection from './pages/portfolioPage/section2/otherSections/section
 import DesignSection from './pages/portfolioPage/section2/otherSections/sectionDesigns/designSection'
 import FeedSection from './pages/portfolioPage/section2/otherSections/sectionFeeds/feedSection'
 
-// const PortfolioPage = () => {
-//   <Route path='/portfolio'>
-
-//   </Route>
-// }
-// Je cree un routeur pour y enregistrer toutes les URLs de mon application
 const router = createBrowserRouter (
   [
     // Definition des differentes routes
@@ -39,6 +32,7 @@ const router = createBrowserRouter (
       // Page Portfolio
       path: '/portfolio',
       element: <PortFolioPage/>,
+      // Pour les routes imbriquee
       children: [
         { path:'about', element: <AboutSection/> },
         {path:'projets', element: <ProjectSection/>},
@@ -81,7 +75,6 @@ const router = createBrowserRouter (
     
   ]
 )
-
 const App = () => {
     // Je retourne ce provider qui chargera mes differents composant en fonctions des differentes URLs
     return <RouterProvider router={router} />

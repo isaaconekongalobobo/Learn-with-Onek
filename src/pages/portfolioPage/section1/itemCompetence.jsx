@@ -36,7 +36,7 @@ const ItemCompetence = ({text, description, animationDelay}) => {
             <motion.span 
                 variants={textVariant} 
                 initial="hidden" 
-                whileInView="visible" 
+                animate="visible" 
                 whileHover={{y:10}}
                 className="hover:text-jaune"
                 onMouseOver={showOrHidde} onMouseLeave={showOrHidde}
@@ -46,7 +46,7 @@ const ItemCompetence = ({text, description, animationDelay}) => {
             <motion.span 
                 variants={descriptionVariant}
                 initial="hidden"
-                whileInView="visible"
+                animate="visible"
                 className={showDescription? "hidden sm:block absolute z-10 p-5 bg-slate-300 ml-1 rounded max-w-60 text-slate-600" : "hidden"} 
             >
                 {description}

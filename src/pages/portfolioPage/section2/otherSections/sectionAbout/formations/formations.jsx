@@ -1,53 +1,45 @@
-import ItemFormation from "./itemFormation";
 import {motion} from 'framer-motion'
-// Tableau stockant toute les formations
-const allFormation = [
+import ItemFormation from './itemFormation';
+
+const formationTable = [
     {
-        id: 0,
-        formation: "Formation en Developpement web et mobile (SIMPLON BAC+2)",
-        description: "Depuis avril 2024,Kadea Academy,Kinshasa RD congo"
+        id:1,
+        title: 'Diplôme SIMPLON (BAC+2)',
+        description: 'Formation en développement web & web mobile',
+        school:'Kadea Academy',
+        schoolWebsite:'https://www.kadea.academy/formations/dev-web/?city=kinshasa',
+        date:'Décembre 2024'
     },
     {
-        id: 1,
-        formation: "Formation en Developpement web et mobile (SIMPLON BAC+2)",
-        description: "Depuis avril 2024,Kadea Academy,Kinshasa RD congo"
+        id:3,
+        title: 'Développement web Django',
+        description: 'Formation en développement web avec Django',
+        school:'Orange Digital Center',
+        schoolWebsite:'https://engageforchange.orange.com/fr/country/cd#our-programs',
+        date:'Aout 2023'
     },
     {
-        id: 2,
-        formation: "Formation en Developpement web et mobile (SIMPLON BAC+2)",
-        description: "Depuis avril 2024,Kadea Academy,Kinshasa RD congo"
+        id:2,
+        title: 'Certification Développeur web',
+        description: 'Formation en développement web Php',
+        school:'Open Group Innovation',
+        schoolWebsite:'https://opengroupinnovation.com/apropos.php#',
+        date:'juille 2023'
     },
 ]
 
-const ulVariant= {
-    hidden: {
-        opacity: 0,
-        y:-10,
-    },
-    visible: {
-        opacity: 1,
-        y:1,
-        transition: {
-            delay: 0.5
-        }
-    }
-}
 const Formations = () => {
     return (
-        <details className="">
-            <summary className="cursor-pointer text-lg text-[#1B4D3E] bg-slate-200 w-1/6 p-2 pl-5 rounded-full">Formations</summary>
-            <motion.ul 
-            variants={ulVariant} 
-            initial="hidden" 
-            whileInView="visible" 
-            className="list-disc p-5 flex flex-col gap-5">
+        <motion.div className='sm:p-5 flex flex-col gap-5' >
+            <h2 className='text-[#1E293B] font-medium text-xl '>Formations</h2>
+            <div className='flex flex-col sm:gap-5'>
                 {
-                    allFormation.map ((formation) => (
-                        <ItemFormation key={formation.id} text={formation.formation} moreDetails={formation.description} />
+                    formationTable.map ((formation) => (
+                        <ItemFormation key={formation.id} title={formation.title} description={formation.description} school={formation.school} schollWebsite={formation.schoolWebsite} date={formation.date} />
                     ))
-                }
-            </motion.ul>
-        </details>   
+                }                
+            </div>
+        </motion.div>
     );
 }
 

@@ -15,7 +15,7 @@ const textVariant = {
 }
 const DescriptionText = ({text}) => {
     return (
-        <motion.div variants={textVariant} initial="hidden" whileInView="visible" className="mt-2">
+        <motion.div variants={textVariant} initial="hidden" animate="visible" className="mt-2">
             <p className="text-sm">{text}</p><br />
         </motion.div>
     );
