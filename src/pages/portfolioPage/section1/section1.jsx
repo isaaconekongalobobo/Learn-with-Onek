@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import DescriptionText from "./descriptionText";
 import Details from "./detaisl/details";
 import ItemCompetence from "./itemCompetence";
@@ -33,7 +32,6 @@ const Section1 = () => {
                             <ItemCompetence text={"Web Designer "} animationDelay={2} description="Le web design est..." />
                         </div>
                         <DescriptionText/>
-                        <p className="text-wrap max-w-3/4">Salut! 👋, je m'appelle Isaac Onekonga, développeur web, designer graphique et web designer, je conçois des solutions impliquant le développement web, en partant de l'analyse des besoins de mes clients jusqu'à la mise en production de leurs projets dgggggggggggggggggggggggg gggggggggggggggggg  gggggggggggggggggggggggg</p>
                     </div>
                     <Details/>
                 </div>              
