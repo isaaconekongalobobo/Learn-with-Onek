@@ -15,7 +15,7 @@ export default function SocialMediaButtons() {
     <div className="flex space-x-6 items-center">
       {socialMedias.map((social) => (
         <motion.a key={social.name} href={social.url} target="_blank" rel="noopener noreferrer"
-          className="p-3 rounded-full bg-white border-2 border-white shadow-lg hover:shadow-xl transition-shadow duration-300"
+          className="p-2 rounded-full bg-white border-2 border-white shadow-lg hover:shadow-xl transition-shadow duration-300"
           whileHover={{ 
             scale: 1.2,
             transition: { duration: 0.3 }
@@ -28,7 +28,7 @@ export default function SocialMediaButtons() {
               transition: { duration: 0.5 }
             }}
           >
-            <social.icon className="size-5 text-[#1E293B] hover:text-[#7ED218]" />
+            <social.icon className="size-4 text-[#1E293B] hover:text-[#7ED218]" />
           </motion.div>
         </motion.a>
       ))}

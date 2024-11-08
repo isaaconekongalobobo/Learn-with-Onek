@@ -23,7 +23,7 @@ const Section1 = () => {
         <section className="p-10 pb-5 flex flex-col gap-5 sm:gap-10" >
             <div className="flex flex-col sm:flex-row sm:gap-5">
                 <MyProfile/>  
-                <div className="">
+                <div className="flex flex-col gap-3">
                     <div>
                         <motion.h1 variants={titleVariant} initial="hidden" animate="visible"  className="text-[35px] sm:text-[50px] font-medium">Isaac Onek</motion.h1>
                         <div>
@@ -31,7 +31,7 @@ const Section1 = () => {
                             <ItemCompetence text={"Graphic designer | "} animationDelay={1.7} description="Le disgn graphique est..." />
                             <ItemCompetence text={"Web Designer "} animationDelay={2} description="Le web design est..." />
                         </div>
-                        <DescriptionText text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos est similique vero iusto architecto distinctio sint non aperiam animi! Suscipit magnam quia vero, quibusdam mollitia consequuntur placeat omnis corporis soluta?" />
+                        <DescriptionText/>
                     </div>
                     <Details/>
                 </div>              
