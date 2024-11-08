@@ -17,7 +17,7 @@ const sectionVariant = {
 const Section2 = () => {
     return (
         <motion.section variants={sectionVariant} initial="hidden" animate="visible" className="pt-16 flex flex-col gap-5 sm:gap-10 bg-white">
-            <div className='pl-5 pr-5'>
+            <div className='pl-10 pr-10'>
                 <div className="flex justify-between  sm:justify-center sm:gap-20 text-sm relative top-[-30px] sm:static ">
                     <Onglet to="about" text="A propos"/>
                     <Onglet to="projets" text="Projets"/>
