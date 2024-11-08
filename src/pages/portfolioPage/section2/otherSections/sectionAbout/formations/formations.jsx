@@ -4,7 +4,7 @@ import ItemFormation from './itemFormation';
 const formationTable = [
     {
         id:1,
-        title: 'Diplôme SIMPLON (BAC+2)',
+        title: 'Certification SIMPLON (BAC+2)',
         description: 'Formation en développement web & web mobile',
         school:'Kadea Academy',
         schoolWebsite:'https://www.kadea.academy/formations/dev-web/?city=kinshasa',
