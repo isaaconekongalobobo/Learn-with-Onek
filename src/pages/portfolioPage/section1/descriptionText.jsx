@@ -16,12 +16,12 @@ const textVariant = {
 const DescriptionText = () => {
     return (
         <motion.div variants={textVariant} initial="hidden" animate="visible" className="mt-2">
-            <pre className="text-sm text-wrap font-sans p-2 pl-0">
+            <p className="text-sm text-wrap font-sans p-2 pl-0">
                 Salut! 👋, je m'appelle Isaac Onekonga, développeur web, designer graphique et web designer, je conçois des solutions impliquant le développement web, en partant de l'analyse des besoins de mes clients jusqu'à la mise en production de leurs projets.
             <br /><br />Besoin de mon expertise?
             <br />
                 N'hesitez pas a me contacter 
-            </pre>
+            </p>
         </motion.div>
     );
 }
