@@ -13,6 +13,7 @@
   font-weight: bold;
 }
 .active span {
+  background-color: #1E293B;
   color: #ffffff
 }
 
