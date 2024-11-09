@@ -2,6 +2,7 @@ import Competences from "./competences/competences";
 import ExperiencesSection from "./experiences/experiences";
 import Formations from "./formations/formations";
 import {motion} from 'framer-motion'
+import Interets from "./interets/interets";
 const sectionVariant = {
     hidden: {opacity:0, scale: 0.5},
     visible: {
@@ -23,6 +24,7 @@ const AboutSection = () => {
                 <Formations/>
                 <ExperiencesSection/>
                 <Competences/>
+                <Interets/>
             </div>
         </motion.section>
     );
