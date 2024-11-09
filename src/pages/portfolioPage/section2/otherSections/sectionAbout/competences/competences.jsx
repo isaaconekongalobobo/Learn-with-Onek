@@ -32,13 +32,33 @@ const skills = [
   { name: 'Canva', icon: SiCanva, color: 'text-blue-400' },
 ];
 
+const buttonVariant = {
+  hidden: {},
+  visible: {
+    backgroundColor: ['#3B82F6', '#10B981', '#6366F1', '#EC4899'],
+    transition: { duration: 4, repeat: Infinity }
+  },
+  whenHover: { scale: 1.05 },
+  whenTap: { scale: 1.05 },
+}
+const animatePresenceVariant = {
+  initial: { opacity: 0, scale: 0.8 },
+  animate: { opacity: 1, scale: 1 },
+  exit: { opacity: 0, scale: 0.8 },
+  transition: { duration: 0.5 }
+}
+
 const SkillIcon = ({ skill, index, isVisible, totalSkills }) => {
   const Icon = skill.icon
-
+  // Recuperation de la taille de l'ecrant
+  const screenWidth = window.screen.width;
   if (!Icon) return null;
 
-  const angle = (index / totalSkills) * 2 * Math.PI;
-  const radius = 150; // Adjust this value to change the size of the circle
+  const angle = (index / totalSkills) * 16 * Math.PI;
+  
+  // Ajustement du perimetre du cercle en fonction de la taille de l'ecrant
+  const radius =  screenWidth < 600? 120 : 200;
+
   const x = Math.cos(angle) * radius;
   const y = Math.sin(angle) * radius;
 
@@ -60,8 +80,7 @@ const SkillIcon = ({ skill, index, isVisible, totalSkills }) => {
         transform: `translate(${x}px, ${y}px)`
       }}
     >
-      <Icon className={`text-3xl ${skill.color}`} />
-      <span className="mt-1 text-xs text-center">{skill.name}</span>
+      <Icon className={` text-[20px] sm:text-[40px] ${skill.color}`} />
     </motion.div>
   );
 };
@@ -70,42 +89,30 @@ const Competences = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4">
-      <motion.button
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-        animate={{
-          backgroundColor: ['#3B82F6', '#10B981', '#6366F1', '#EC4899'],
-          transition: { duration: 4, repeat: Infinity }
-        }}
-        onClick={() => setIsOpen(!isOpen)}
-        className="px-6 py-3 text-lg font-semibold text-white rounded-full shadow-lg focus:outline-none mb-8 z-10"
-      >
-        {isOpen ? 'Fermer' : 'Compétences'}
-      </motion.button>
+    <section className=''>
+      <div className="flex justify-center items-center pb-20">
+        <motion.button variants={buttonVariant} whileHover="whenHover" whileTap="whenTap" animate="visible"
+          onClick={() => setIsOpen(!isOpen)}
+          className="p-5 size-24 font-semibold text-white rounded-full shadow-lg focus:outline-none mb-8 z-10 relative top-10 sm:top-64 sm:right-4 "
+        >
+          {isOpen ? 'Reduire' : 'Skills'}
+        </motion.button>
+        <div className='relative sm:top-52 right-20 sm:right-[7%]'>
+          <AnimatePresence>
+            {isOpen && (
+              <motion.div variants={animatePresenceVariant}
+                initial="initial" animate="animate" exit="exit" transition="transition" className=""
+              >
+                {skills.map((skill, index) => (
+                  <SkillIcon key={skill.name} skill={skill} index={index} isVisible={isOpen} totalSkills={skills.length}/>
+                ))}
+              </motion.div>
+            )}
+          </AnimatePresence>        
+        </div>
+      </div>      
+    </section>
 
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.8 }}
-            transition={{ duration: 0.5 }}
-            className="relative w-[400px] h-[400px]"
-          >
-            {skills.map((skill, index) => (
-              <SkillIcon 
-                key={skill.name} 
-                skill={skill} 
-                index={index} 
-                isVisible={isOpen} 
-                totalSkills={skills.length}
-              />
-            ))}
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
   );
 }
 
