@@ -90,14 +90,22 @@ const Competences = () => {
 
   return (
     <section className=''>
-      <div className="flex justify-center items-center pb-20">
+      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-12">
+        <h2 className="text-xl font-bold text-gray-800 mb-4">Mes competences</h2>
+        <div className="w-20 h-1 bg-[#7ED218] mx-auto rounded-full"></div>
+      </motion.div>
+      <div className="flex justify-center items-center pb-20 relative top-8">
+
+        {/* Bouton */}
         <motion.button variants={buttonVariant} whileHover="whenHover" whileTap="whenTap" animate="visible"
           onClick={() => setIsOpen(!isOpen)}
-          className="p-5 size-24 font-semibold text-white rounded-full shadow-lg focus:outline-none mb-8 z-10 relative top-10 sm:top-64 sm:right-4 "
+          className="p-5 size-24 font-semibold text-white rounded-full shadow-lg focus:outline-none mb-8 z-10 relative top-10 sm:top-36 sm:left-1 "
         >
           {isOpen ? 'Reduire' : 'Skills'}
         </motion.button>
-        <div className='relative sm:top-52 right-20 sm:right-[7%]'>
+
+        {/* Cercle des icones */}
+        <div className='relative sm:top-24 right-20 sm:right-[6%]'>
           <AnimatePresence>
             {isOpen && (
               <motion.div variants={animatePresenceVariant}

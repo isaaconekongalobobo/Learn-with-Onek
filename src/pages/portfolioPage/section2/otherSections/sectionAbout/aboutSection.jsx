@@ -19,7 +19,7 @@ const AboutSection = () => {
             className="bg-white p-5"
         >
 
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-8">
                 <Formations/>
                 <ExperiencesSection/>
                 <Competences/>
