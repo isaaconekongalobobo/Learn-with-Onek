@@ -1,3 +1,4 @@
+import ExperiencesSection from "./experiences/experiences";
 import Formations from "./formations/formations";
 import {motion} from 'framer-motion'
 const sectionVariant = {
@@ -17,8 +18,9 @@ const AboutSection = () => {
             className="bg-white p-5"
         >
 
-            <div>
+            <div className="flex flex-col gap-24">
                 <Formations/>
+                <ExperiencesSection/>
             </div>
         </motion.section>
     );
