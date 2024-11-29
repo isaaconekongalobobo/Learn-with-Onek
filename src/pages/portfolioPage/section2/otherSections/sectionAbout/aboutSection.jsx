@@ -17,7 +17,7 @@ const AboutSection = () => {
             variants={sectionVariant} 
             initial="hidden" 
             animate="visible" 
-            className="bg-white p-5"
+            className="bg-white"
         >
 
             <div className="flex flex-col gap-8">

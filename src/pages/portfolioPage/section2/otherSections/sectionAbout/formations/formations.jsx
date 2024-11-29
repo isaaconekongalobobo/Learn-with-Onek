@@ -30,29 +30,29 @@ const formationTable = [
 const FormationSection = () => {
     return (
         <section>
-        <div className="max-w-6xl mx-auto px-4">
-            <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-center mb-12"
-            >
-            <h2 className="text-xl font-bold text-gray-800 mb-4">Mon Parcours de Formation</h2>
-            <div className="w-20 h-1 bg-[#7ED218] mx-auto rounded-full"></div>
-            </motion.div>
+          <div className="max-w-6xl mx-auto px-4">
+              <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="text-center mb-12"
+              >
+              <h2 className="text-xl font-bold text-gray-800 mb-4">Mon Parcours de Formation</h2>
+              <div className="w-20 h-1 bg-[#7ED218] mx-auto rounded-full"></div>
+              </motion.div>
 
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {formationTable.map((formation, index) => (
-                <motion.div
-                key={formation.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                >
-                <FormationCard formation={formation} />
-                </motion.div>
-            ))}
-            </div>
-        </div>
+              <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+              {formationTable.map((formation, index) => (
+                  <motion.div
+                  key={formation.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                  >
+                  <FormationCard formation={formation} />
+                  </motion.div>
+              ))}
+              </div>
+          </div>
         </section>
   );
 }

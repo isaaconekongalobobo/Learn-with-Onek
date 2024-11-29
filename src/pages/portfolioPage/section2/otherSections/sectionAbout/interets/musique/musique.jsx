@@ -33,11 +33,11 @@ const Musique = () => {
     return (
         <div>
             <div className="flex flex-col gap-2">
-                <div className="flex items-center gap-2">
+                <div className="flex items-center justify-center gap-2">
                     <h3 className="text-slate-800 text-xl">Musique</h3>
                     <Music className="text-[#00693E] size-7 " />
                 </div>
-                <p className="text-slate-800">
+                <p className="text-slate-800 text-center">
                     🎶 La musique occupe une place essentielle dans ma vie. <br /> <br />
                     A la fois source d'inspiration et moyen d'expression, elle est pour moi un langage universel 🌍 qui permet de transcender les barrières culturelles et émotionnelles.<br />
                     La musique est bien plus qu'un simple centre d'intérêt pour moi ; c'est une véritable aventure 🌟 qui me permet d'explorer sans cesse de nouvelles facettes de l'art et de la vie...
