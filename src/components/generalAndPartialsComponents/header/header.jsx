@@ -6,16 +6,17 @@ import {motion} from 'framer-motion'
 import PageTitle from "./pageTitle"
 import Onglets from "./onglets"
 import CtvInscription from "../ctvInscription"
+
+
 const Header  = () => {
-    // Je creer un state pour gerer l'affichage de la sidebar
     const [sidebar, setSideBar] = useState(false)
-    // Fonction pour modifier le state de sidebar
+
     const updateSideBar = () => setSideBar (!sidebar)
     return (
         <>
             <header>
                 <nav>
-                    <div className="fixed w-full z-30 h-[10%] sm:h-[12%] md:h-[10%] flex bg-principale p-5 pl-12 pr-12 sm:p-10 sm:pl-12 gap-12 sm:gap-28 md:gap-5 justify-around  items-center shadow-lg">
+                    <div className="fixed w-screen z-30 h-[10%] sm:h-[12%] md:h-[10%] flex bg-principale p-5 pl-4 pr-4 sm:p-10 sm:pl-12 gap-12 sm:gap-28 md:gap-5 justify-around  items-center shadow-lg">
                         <PageTitle/>
                         <div className="relative left-16">
                             <Onglets/>    

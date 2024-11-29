@@ -24,7 +24,7 @@ const MyProfile = () => {
             whileHover="whenHover"
             src="portfolio/mon-design-compressed.png" 
             alt="mon profil" 
-            className=" w-80 sm:w-[20%] rounded "
+            className=" size-80 sm:w-[20%] rounded "
         />
     );
 }
