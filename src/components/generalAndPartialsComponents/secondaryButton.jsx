@@ -13,7 +13,7 @@ const SecondaryButton = ({text, url}) => {
         navigate (url)
     }
     return (
-        <motion.button className="bg-[#7ED218] p-4 pl-5 pr-5 flex items-center gap-3 rounded" onClick={()=> {redirect(url)}} variants={btnVariant} whileHover={"whenHover"} >
+        <motion.button className="bg-secondary-green bg-opacity-90 hover:bg-opacity-100 px-4 py-3 flex items-center gap-3 rounded" onClick={()=> {redirect(url)}} variants={btnVariant} whileHover={"whenHover"} >
             <span className="text-[#1B4D3E]">{text}</span>
             <span>
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
