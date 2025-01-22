@@ -9,12 +9,15 @@ export default {
       colors : {
         principale: '#00693E',
         aliceblue: '#F0F8FF',
-        jaune: '#F4C431'
+        jaune: '#F4C431',
+        'main-green': '#00693E'
       },
       backgroundColor : {
         principale: '#00693E',
         aliceblue: '#F0F8FF',
-        jaune: '#F4C431'
+        jaune: '#F4C431',
+        'main-green': '#00693E',
+        'secondary-green': '#7ED218'
       },
       height : {
         bg1: '500px',
@@ -41,9 +44,10 @@ export default {
         titrePhoneDevice: '900px'
       },
       screens: {
-        'tablet': {'min': '768px', 'max':'1024px'},
-        'desktop': {'min':'2048', 'max':'1152'},
-      }
+        'xs': { max: '639px' },
+        'tablet': { min: '640px', max: '1023px' },
+        'desktop': { min: '1024px' },
+      },
     },
   },
   plugins: [],
