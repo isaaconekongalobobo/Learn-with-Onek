@@ -60,7 +60,7 @@ const skills = {
     ]      
 }
 
-const Aside1 = () => {
+const Frontend = () => {
     return (
         <aside className="w-64 p-2">
             <div>
@@ -75,5 +75,5 @@ const Aside1 = () => {
     );
 }
 
-export default Aside1
+export default Frontend
 

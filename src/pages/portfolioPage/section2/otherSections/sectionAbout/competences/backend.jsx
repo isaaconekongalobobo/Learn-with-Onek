@@ -55,11 +55,11 @@ const skills = {
       ]
 }
 
-const Aside2 = () => {
+const Backend = () => {
     return (
         <aside className="w-64 p-2">
             <div>
-                <h3 className="text-slate-800 font-medium text-xl ">Front-end</h3>
+                <h3 className="text-slate-800 font-medium text-xl ">Back-end</h3>
                 <div className="text-slate-80 grid grid-cols-2 gap-4 ">
                     {
                         skills.Backend.map ((skill, index) => <Skill key={index} skill={skill}  /> )
@@ -70,5 +70,5 @@ const Aside2 = () => {
     );
 }
 
-export default Aside2
+export default Backend
 

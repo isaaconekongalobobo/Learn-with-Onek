@@ -43,7 +43,7 @@ const CardMusique = ({music}) => {
     return (
         <div className="flex flex-col items-center gap-2" onMouseOver={() => {showOrHidde(true)}} onMouseLeave={() => {showOrHidde (false)}}>
             <motion.img src={music.image} alt={music.artist} variants={imgVariant}
-                className="rounded-full w-[70%] h-[70%] border-8 border-transparent hover:border-[#00693E] "
+                className="rounded-full w-40 border-8 border-transparent hover:border-[#00693E] "
                 whileHover="whenHover"
             />
             {/* Bouton pour jouer le morceau */}

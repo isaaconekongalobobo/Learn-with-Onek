@@ -5,8 +5,8 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaPhp, FaAngular, FaGitAlt, FaGithub, FaDocker, FaLinux, FaFigma } from 'react-icons/fa';
 import { SiTailwindcss, SiFramer, SiExpress, SiAdonisjs, SiTypescript, SiDjango, SiPostgresql, SiMysql, SiFirebase, SiMongodb, SiCanva } from 'react-icons/si';
-import Aside1 from './aside1';
-import Aside2 from './aside2';
+import Frontend from './frontend';
+import Backend from './backend';
 
 const skills = [
   { name: 'HTML', icon: FaHtml5, color: 'text-orange-500' },
@@ -92,16 +92,15 @@ const Competences = () => {
 
   return (
     <section>
-      {/* Page title */}
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-12">
         <h2 className="text-xl font-bold text-gray-800 mb-4">Mes compétences Techniques</h2>
         <div className="w-20 h-1 bg-[#7ED218] mx-auto rounded-full"></div>
       </motion.div>
 
       <div className='flex flex-col sm:flex-row gap-2 justify-between p-8'>
-        {/* Aside section 1 (pour la version pc) */}
+        {/* Frontend(pour la version pc) */}
         <div className='hidden sm:block'>
-          <Aside1/>  
+            <Frontend/>
         </div>
         
 
@@ -130,13 +129,13 @@ const Competences = () => {
         </div>   
 
         <div className='relative sm:static top-32 text-center' >
-          {/* Aside section 1 (pour la version mobile) */}
+          {/* Frontend (pour la version mobile) */}
           <div className='sm:hidden'>
-            <Aside1/>  
+            <Frontend/> 
           </div>  
 
-          {/* Aside section 2 */}
-          <Aside2/>            
+          {/* Backend */}
+          <Backend/>      
         </div>
       </div>
 

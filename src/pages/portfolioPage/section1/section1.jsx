@@ -20,7 +20,7 @@ const titleVariant = {
 
 const Section1 = () => {
     return (
-        <section className="p-3 pt-8 pb-8 sm:pt-10 sm:pb-10 flex flex-col gap-5 sm:gap-10 bg-[#1B4D3E]" >
+        <section className=" px-16 xs:px-8 pt-36 xs:pt-28 py-10 flex flex-col gap-5 sm:gap-10 bg-[#1B4D3E]" >
             <div className="flex flex-col sm:flex-row sm:gap-5">
                 <MyProfile/>  
                 <div className="flex flex-col gap-3">

@@ -33,16 +33,13 @@ import Section2 from "./section2/section2";
 
 const PortFolioPage = () => {
     return (
-        <div className="flex flex-col gap-[4rem] sm:gap-[5rem]  ">
+        <>
             <Header/>
-            <main className="">
+            <main>
                 <Section1/>
                 <Section2/>
             </main>
-                {/* <div className=''>
-                    <img src="/sectionAboutIsaac/bg-about-isaac.jpg" alt="Initial isaac onek"  className='relative top-20 sm:top-0' />
-                </div> */}
-        </div>
+        </>
     );
 }
 

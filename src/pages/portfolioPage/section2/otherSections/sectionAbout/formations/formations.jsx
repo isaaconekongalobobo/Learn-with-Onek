@@ -36,8 +36,8 @@ const FormationSection = () => {
               animate={{ opacity: 1, y: 0 }}
               className="text-center mb-12"
               >
-              <h2 className="text-xl font-bold text-gray-800 mb-4">Mon Parcours de Formation</h2>
-              <div className="w-20 h-1 bg-[#7ED218] mx-auto rounded-full"></div>
+              <h2 className="text-xl font-bold text-gray-800 mb-4">Formations</h2>
+              <div className="w-20 h-1 bg-secondary-green mx-auto rounded-full"></div>
               </motion.div>
 
               <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
