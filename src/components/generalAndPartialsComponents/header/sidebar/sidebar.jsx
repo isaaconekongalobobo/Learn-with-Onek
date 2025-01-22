@@ -1,14 +1,11 @@
 /* eslint-disable react/prop-types */
-// Importation de framer-motion
-import {motion} from 'framer-motion'
+import { motion } from 'framer-motion'
 import OngletSidebar from './ongletSidebar';
 import { Link } from 'react-router-dom';
-import CrossCancel from '../../icons/crossCancel';
 
-// Variant pour animer la side-bar
 const sidebarVariant = {
   hidden: {
-    x: 80,
+    x: -20,
     opacity: 0,
   },
   visible: {
@@ -17,27 +14,18 @@ const sidebarVariant = {
   }
 }
 
-const Sidebar = ({sidebar, setSideBar}) => {
-  // Fonction pour mettre le state a false et masquer ainsi la side-bar
-  const updateSideBar = () => setSideBar (false)
+const Sidebar = ({ sidebar }) => {
   return (
     <>
-      <motion.nav variants={sidebarVariant} initial="hidden" whileInView="visible" className= {sidebar? " sm:hidden tablet:block fixed z-30 left-24 bg-white h-full w-[90%] shadow-sm shadow-black" : "hidden" }  >
+      <motion.nav variants={sidebarVariant} initial="hidden" whileInView="visible" 
+      className= {sidebar? " desktop:hidde fixed top-0 left-0 w-64 tablet:w-2/4 h-screen  bg-main-green bg-opacity-95 shadow-lg px-4 tablet:px-8 py-2 tablet:py-4 text-white " : "hidden" }  >
         <div className="text-principale text-[18px] flex flex-col gap-5 pt-5">
-          <div className='flex flex-col gap-3'>
-            <div className='flex items-center'>
-              {/* Logotype de l'application */}
-              <Link to="/" >
-                <h1 className="relative text-sm left-5  font-bold font-dortmund">
-                  <strong className="font-pavelt">Learn With Onek</strong>
-                </h1>            
-              </Link>   
-              {/* Icone pour fermer la sidebar */}
-              <CrossCancel action={updateSideBar} />               
-            </div>
+          <div className='flex flex-col gap-8'>
+            <Link to="/" >
+              <h1 className="font-pavelt text-white xs:text-sm tablet:text-xl">Learn With Onek</h1>
+            </Link>  
 
-            {/* Appel des differents onglets */}
-            <div className='divide-y'>
+            <div className='flex flex-col gap-4'>
               <OngletSidebar url="/" title="Acceuil"  />
               <OngletSidebar url="/about" title="A propos"  />
               <OngletSidebar url="/portfolio" title="Portfolio"  />

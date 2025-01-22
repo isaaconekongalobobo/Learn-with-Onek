@@ -14,7 +14,11 @@
 }
 .active span {
   background-color: #1E293B;
-  color: #ffffff
+  color: #F4C431;
+}
+
+.active p {
+  color: #F4C431;
 }
 
 

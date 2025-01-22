@@ -13,7 +13,7 @@ const Header  = () => {
     const updateSideBar = () => setSideBar (!sidebar)
     return (
         <>
-            <nav className="fixed w-full z-30 flex justify-between px-16 xs:px-8 py-3 xs:py-2 items-center bg-main-green">
+            <nav className="fixed w-full z-30 flex justify-between px-16 xs:px-8 py-3 xs:py-2 items-center bg-main-green desktop:bg-opacity-60 shadow-lg desktop:backdrop-blur-md">
                 <h1 className="font-bold font-pavelt xs:text-sm">Learn With Onek </h1>
                 <div className="desktop:flex hidden  items-center gap-4">
                     <Onglets/>
