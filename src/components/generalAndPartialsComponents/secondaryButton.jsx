@@ -2,9 +2,7 @@
 import {motion} from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
 const btnVariant= {
-    whenHover: {
-        scale: 1.1, x:20
-    }
+    whenHover: { y: -5 }
 }
 const SecondaryButton = ({text, url}) => {
     // Use navigate est un hook de react qui permet de naviguer entre differentes url 
@@ -13,8 +11,8 @@ const SecondaryButton = ({text, url}) => {
         navigate (url)
     }
     return (
-        <motion.button className="bg-secondary-green bg-opacity-90 hover:bg-opacity-100 px-4 py-3 flex items-center gap-3 rounded" onClick={()=> {redirect(url)}} variants={btnVariant} whileHover={"whenHover"} >
-            <span className="text-[#1B4D3E]">{text}</span>
+        <motion.button className="bg-secondary-green bg-opacity-90 hover:bg-opacity-100 px-4 py-3 flex items-center justify-center gap-3 rounded w-52" onClick={()=> {redirect(url)}} variants={btnVariant} whileHover={"whenHover"} >
+            <span className="text-main-green">{text}</span>
             <span>
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                     <path

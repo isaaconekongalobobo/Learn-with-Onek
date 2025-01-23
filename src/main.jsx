@@ -9,7 +9,6 @@ import App from './app'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    {/* Composant principale de mon application, qui contient les differentes routes: App.jsx */}
     <App/>
   </StrictMode>,
 )

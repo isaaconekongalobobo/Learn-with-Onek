@@ -2,10 +2,8 @@ import Illustration1 from "./illustration1"
 import SectionAbout from "./sectionAbout/sectionAbout"
 import SectionAboutIsaac from "./sectionParcours/sectionAboutIsaac"
 
-// J'importe le composant Acroche qui contient le texte anime de la section 1
 import SectionRecentPublications from "../main/sectionRecentPublications/sectionRecentPublications"
 import Accroche from "../main/section1/accroche"
-// import BoutonCta from "../../../components/generalAndPartialsComponents/header/boutonCta"
 import SectionChatBot from "./sectionChatBot/sectionChatBot"
 import CallToValue from "./callToValue"
 import SectionTemoignage from "./sectionTemoignage/sectionTemoignage"

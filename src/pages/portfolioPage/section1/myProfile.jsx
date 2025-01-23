@@ -22,7 +22,7 @@ const MyProfile = () => {
             initial="hidden" 
             animate="visible" 
             whileHover="whenHover"
-            src="portfolio/mon-design-compressed.png" 
+            src="/portfolio/mon-design-compressed.png" 
             alt="mon profil" 
             className=" w-80  rounded "
         />

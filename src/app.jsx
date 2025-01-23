@@ -2,7 +2,6 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 // Importation de mes differentes composant qui seront ensuite passe au routeur de react-router-dom
 import HomePage from './pages/homePage/HomePage'
-import AboutPage from './pages/AboutPage/aboutPage'
 import PortFolioPage from './pages/portfolioPage/portFolioPage'
 import TutorialsPage from './pages/tutorialsPage/tutorialsPage'
 import ContactPage from './pages/contactPage/contactPage'
@@ -17,22 +16,13 @@ import FeedSection from './pages/portfolioPage/section2/otherSections/sectionFee
 
 const router = createBrowserRouter (
   [
-    // Definition des differentes routes
     {
-      // Page d'acceuil
       path: '/',
       element: <HomePage/>
     },
     {
-      // Page A propos
-      path: '/about',
-      element: <AboutPage/>
-    },
-    {
-      // Page Portfolio
       path: '/portfolio',
       element: <PortFolioPage/>,
-      // Pour les routes imbriquee
       children: [
         { path:'about', element: <AboutSection/> },
         {path:'projets', element: <ProjectSection/>},
@@ -41,16 +31,13 @@ const router = createBrowserRouter (
       ]
     },
     {
-      // Page Tutoriels
       path: '/tutoriels',
       element: <TutorialsPage/>
     },
     {
-      // Page Contacts
       path: '/contact',
       element: <ContactPage/>
     },
-    // Page pour le chatbot
     {
       path: '/chatbot',
       element: <ChatbotPage/>
@@ -76,7 +63,6 @@ const router = createBrowserRouter (
   ]
 )
 const App = () => {
-    // Je retourne ce provider qui chargera mes differents composant en fonctions des differentes URLs
     return <RouterProvider router={router} />
 }
 
