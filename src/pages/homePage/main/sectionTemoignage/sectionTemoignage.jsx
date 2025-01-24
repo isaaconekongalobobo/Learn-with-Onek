@@ -60,7 +60,7 @@ const SectionTemoignage = () => {
   }, [])
 
   return (
-    <section className="py-12 bg-gradient-to-br from-emerald-500 to-emerald-900 relative top-[680px] sm:top-96">
+    <section className="py-10 bg-gradient-to-br from-emerald-500 to-emerald-900 ">
       <div className="container mx-auto px-4">
         <div className='flex flex-col gap-3'>
           <SectionsTitle text={titleText} color='#ffffff' />

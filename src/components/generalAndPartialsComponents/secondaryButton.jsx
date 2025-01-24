@@ -5,11 +5,8 @@ const btnVariant= {
     whenHover: { y: -5 }
 }
 const SecondaryButton = ({text, url}) => {
-    // Use navigate est un hook de react qui permet de naviguer entre differentes url 
     const navigate = useNavigate()
-    const redirect = (url) => {
-        navigate (url)
-    }
+    const redirect = (url) => navigate (url)
     return (
         <motion.button className="bg-secondary-green bg-opacity-90 hover:bg-opacity-100 px-4 py-3 flex items-center justify-center gap-3 rounded w-52" onClick={()=> {redirect(url)}} variants={btnVariant} whileHover={"whenHover"} >
             <span className="text-main-green">{text}</span>

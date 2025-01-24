@@ -27,10 +27,8 @@ const Sidebar = ({ sidebar }) => {
 
             <div className='flex flex-col gap-4'>
               <OngletSidebar url="/" title="Acceuil"  />
-              <OngletSidebar url="/about" title="A propos"  />
               <OngletSidebar url="/portfolio" title="Portfolio"  />
               <OngletSidebar url="/tutoriels" title="Tutoriels"  />
-              <OngletSidebar url="/contact" title="Contact"  />              
             </div>
           </div>
         </div>

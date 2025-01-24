@@ -14,12 +14,9 @@ const SectionAbout = () => {
                                 <span className="relative text-principale italic" > gratuitement </span>
                             </span>
                             des langages de programation tel  que le <strong className="italic">HTML</strong>, le<strong className="italic">CSS3</strong>, le <strong className="italic">JavaScript</strong>, le <strong className="italic">Php</strong> et plein d&apos;autres... </p>                            
-                        </div>
-                        {/* Bouton pour afficher tout les catalogues, visible uniquement sur pc */}
-                        <div className="hidden desktop:flex ">
-                            <SecondaryButton text="Voir tout les modules" url="/about" />
-                        </div>                        
                     </div>
+                    <SecondaryButton text="Voir tout les modules" url="/about" />                       
+                </div>
                 <GalleryLangages/>
             </section>
         </>

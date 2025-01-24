@@ -4,7 +4,7 @@ import BotAmimatedIllustration from "./botAmimatedIllustration";
 
 const SectionChatBot = () => {
     return (
-        <section className="relative top-[680px] sm:top-[420px] p-3 sm:p-14  pt-32 sm:pt-14 bg-white flex flex-col gap-5">
+        <section className="py-10 px-16">
             <div className="text-left">
                 <SectionsTitle text={'Demandez à mon chatbot de vous aider, comme un ami !'} /> 
             </div>
