@@ -18,7 +18,6 @@ const MainHomePage = () => {
                             <CallToValue/>
                             <Accroche text="Viens apprendre les technos qui vont faconner le futur!" />
                             <p className="tablet:text-start tablet:pl-2">Avec cette plateforme, nous allons tous ensemble explorer cet univers du developpement web, et apprendre des trucs et astuces pour booster ta productivite! <br /> Alors, tu veux essayer ? </p>
-                            {/* <BoutonCta/> */}
                     </div>
                     <Illustration1/>                       
                 </section>

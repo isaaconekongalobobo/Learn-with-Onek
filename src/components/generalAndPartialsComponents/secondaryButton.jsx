@@ -8,8 +8,8 @@ const SecondaryButton = ({text, url}) => {
     const navigate = useNavigate()
     const redirect = (url) => navigate (url)
     return (
-        <motion.button className="bg-secondary-green bg-opacity-90 hover:bg-opacity-100 px-4 py-3 flex items-center justify-center gap-3 rounded w-52" onClick={()=> {redirect(url)}} variants={btnVariant} whileHover={"whenHover"} >
-            <span className="text-main-green">{text}</span>
+        <motion.button className="bg-secondary-green bg-opacity-90 hover:bg-opacity-100 px-4 py-3 flex items-center justify-center gap-3 rounded w-2/4 xs:w-3/4" onClick={()=> {redirect(url)}} variants={btnVariant} whileHover={"whenHover"} >
+            <p className="text-main-green">{text}</p>
             <span>
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                     <path
