@@ -10,7 +10,7 @@ const TitleVariant = {
 const SectionsTitle = ({text, color="#00693E"}) => {
     return (
         <>
-            <motion.h1 variants={TitleVariant} initial="hidden" animate="visible" transition="transition" style={{color:color}} className='text-2xl text-center font-bold' > {text} </motion.h1>
+            <motion.h1 variants={TitleVariant} initial="hidden" animate="visible" transition="transition" style={{color:color}} className='text-2xl text-center font-medium' > {text} </motion.h1>
         </>
     )
 }
