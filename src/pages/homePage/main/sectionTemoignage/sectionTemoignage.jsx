@@ -1,8 +1,7 @@
 import { useRef, useEffect } from 'react'
-import { motion } from 'framer-motion'
 import SectionsTitle from '../../../../components/generalAndPartialsComponents/sectionsTitle'
 import SubTitle from '../../../../components/generalAndPartialsComponents/subTitle'
-import BtnScroll from './btnScroll'
+import TestimonialCard from './components/testimonialCard'
 
 const testimonials = [
   {
@@ -31,14 +30,7 @@ const testimonials = [
     image: "/placeholder.svg?height=100&width=100"
   }
 ]
-// Texte pour le titre
 const titleText = "Ils ont tiré profit de cette plateforme, ils en parlent..."
-// Variant pour laa div des temoignage
-const DivVariant = {
-  hidden : { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0 },
-  transition: { duration: 0.5, delay: 0.1 }
-}
 
 const SectionTemoignage = () => {
   const scrollRef = useRef(null)
@@ -67,16 +59,9 @@ const SectionTemoignage = () => {
           <SubTitle text="Découvrez les expériences des personnes qui ont se sont forme grâce a cette plateforme et qui partagent leur expérience" color='#ffffff' />
         </div>
         <div className="relative">
-          <BtnScroll scrollRef={scrollRef} scrollOffset={-300} />
           <div ref={scrollRef} className="flex overflow-x-auto space-x-6 py-4"style={{ scrollSnapType: 'x mandatory',scrollbarWidth: 'none',msOverflowStyle: 'none'}}>
             {testimonials.map((testimonial, index) => (
-              <motion.div key={index} className="flex-shrink-0 w-80 bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-xl p-6 shadow-xl" style={{ scrollSnapAlign: 'start' }} variants={DivVariant} initial="hidden" whileInView="visible" whileHover={{y:-15,}} transition="transition" >
-                <div className="flex items-center mb-4">
-                  <img src={testimonial.image} alt={testimonial.name} className="w-16 h-16 rounded-full mr-4 object-cover"/>
-                  <h3 className="text-xl font-semibold text-white">{testimonial.name}</h3>
-                </div>
-                <p className="text-white">{testimonial.comment}</p>
-              </motion.div>
+              <TestimonialCard key={index} userImage={testimonial.image} userName={testimonial.name} userComment={testimonial.comment}/>
             ))}
           </div>
         </div>
