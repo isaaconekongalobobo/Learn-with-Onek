@@ -13,13 +13,7 @@ const sectionVariant = {
 
 const AboutSection = () => {
     return (
-        <motion.section 
-            variants={sectionVariant} 
-            initial="hidden" 
-            animate="visible" 
-            className="bg-white"
-        >
-
+        <motion.section variants={sectionVariant} initial="hidden" animate="visible" >
             <div className="flex flex-col gap-8">
                 <Formations/>
                 <ExperiencesSection/>

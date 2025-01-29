@@ -7,7 +7,6 @@ import Accroche from "../main/section1/accroche"
 import SectionChatBot from "./sectionChatBot/sectionChatBot"
 import CallToValue from "./callToValue"
 import SectionTemoignage from "./sectionTemoignage/sectionTemoignage"
-import Footer from "../../../components/generalAndPartialsComponents/footer/footer"
 
 const MainHomePage = () => {
     return (
@@ -27,7 +26,6 @@ const MainHomePage = () => {
                 <SectionChatBot/>
                 <SectionTemoignage/>
             </main>
-            <Footer/>
         </>
     )
 }
