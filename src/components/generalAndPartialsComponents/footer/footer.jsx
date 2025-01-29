@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import OngletFooter from "./ongletFooter";
 import SocialMediaSection from "./socialMedias/socialMediaSection";
 
@@ -13,7 +12,6 @@ const Footer = () => {
                 <div className="flex flex-col items-center  gap-2 w-2/4 justify-center">
                     <h6 className="text-principale text-xl font-medium">À consulter</h6>
                     <div className="text-principale flex flex-col sm:flex-row sm:gap-3 items-center sm:items-start text-[19px]">
-                        <OngletFooter ancre="/about" text="À propos" bar={true} />
                         <OngletFooter ancre="/portfolio" text="Portfolio" bar={true} />
                         <OngletFooter ancre="/tutoriels" text="Tutoriels" bar={true} />
                         <OngletFooter ancre="/chatbot" text="Chatbot" bar={true} />
