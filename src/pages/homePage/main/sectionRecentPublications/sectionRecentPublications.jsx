@@ -8,45 +8,35 @@ import axios from 'axios';
 import SecondaryButton from '../../../../components/generalAndPartialsComponents/secondaryButton';
 
 // Bloc div pour les publications
-const BlocPuclications = ({recentPublications, setRecentPublications}) => {
-    if(recentPublications.length === 0) {
+const BlocPuclications = ({posts}) => {
+    if (posts.length === 0) {
         return <NoRecentPublicationsMessage/>
-    } 
-    return (
-        <div className='flex flex-col sm:flex-row relative top-[-80px] sm:top-[-40px] sm:flex-wrap gap-5 justify-center items-center'>
-            {
-                recentPublications.map ((pub) => (
-                    <Publication key={pub.id}  publicationInfo={pub} setPublicationInfo={setRecentPublications} />
-                ))
-            }
-        </div>
-    )
+    } else {
+        return (
+            <div className='grid grid-cols-4 xs:grid-cols-1 gap-5 px-16 xs:px-6'>
+                {
+                    posts.map ((post) => (
+                        <Publication key={post.id}  post={post} />
+                    ))
+                }
+            </div>            
+        )
+    }
 }
 
 
 
 const SectionRecentPublications = () => {
 
-    const [recentPublications, setRecentPublications] = useState([])
-    const [loader, setLoader] = useState(true)
+    const [ recentPosts, setRecentPost ] = useState([])
+    const [loader, setLoader ] = useState(true)
 
-    const fetchRecentPub = async () => {
-        axios.get ('https://jsonplaceholder.typicode.com/posts')
-        .then ((response) => {
-            const limitedData = []
-            for (let i = 0; i < 6; i++) {
-                limitedData.push (response.data[i])
-            }
-            setRecentPublications (limitedData)
-        })
-        .catch ((console.error()
-        ))
-        .finally (() => {
-            setLoader (false)
-        })
-    }
     useEffect (() => {
-        fetchRecentPub ()
+        setLoader (true)
+        axios.get (import.meta.env.VITE_GET_RECENTS_POSTS) 
+       .then ((res) => setRecentPost (res.data))
+       .catch ((error) => console.log ('Erreur lors de la requette', error))
+       .finally (() => setLoader (false))
     },[])
 
     return (
@@ -56,8 +46,8 @@ const SectionRecentPublications = () => {
                     <motion.h1 className='text-principale text-2xl text-center w-96 sm:w-texteSectionParcour font-bold ' >Regarde les dernières  <mark className="px-2 py-1 text-main-green">publications </mark> faites pour toi</motion.h1>
                     <h2 className="text-center ">As-tu raté mes derniers posts ? Je te récapitule</h2>
                 </div>
-                {loader? <Loader/> : <BlocPuclications recentPublications={recentPublications} setRecentPublications={setRecentPublications}  loader={loader} /> }
-                {loader && <div className='flex justify-center'><SecondaryButton text="Voir plus des publications" url="/tutoriels" /></div>}
+                {loader ? <Loader/> : <BlocPuclications posts={ recentPosts }/> }
+                {!loader && <div className='flex justify-center'><SecondaryButton text="Voir plus des publications" url="/tutoriels" /></div>}
             </section>
         </>
     );
