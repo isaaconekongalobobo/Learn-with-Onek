@@ -5,10 +5,9 @@ import LikeIcon from "../../icons/likeIcon";
 const PublicationDetails = ({ likes, setLikes, comments, setComments }) => {
     return (
         <>
-            <div className="flex justify-center items-center gap-8"> 
-                {/* J'importe le composant LikeIcon pour afficher l'icone des likes */}
+            <div className="flex justify-center items-center gap-5"> 
                 <LikeIcon likes={likes} setLikes={setLikes} />
-                <div className="flex items-center gap-2">
+                <div className="flex gap-1 relative top-1 items-center">
                     <CommentsIcon setComments={setComments}/>
                     <span> {comments} </span>
                 </div>
